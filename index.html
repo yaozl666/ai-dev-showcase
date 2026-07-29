@@ -130,23 +130,20 @@ img{cursor:zoom-in}
 <p class="subtitle">以产品思维规划框架，用 AI 编码能力实现落地。<br>不写一行代码，从需求分析到平台上线的完整实践复盘。</p>
 <div class="header-stats">
 <div class="header-stat"><div class="num">0</div><div class="label">行手写代码</div></div>
-<div class="header-stat"><div class="num">7</div><div class="label">开发阶段</div></div>
-<div class="header-stat"><div class="num">53+</div><div class="label">修改/新增文件</div></div>
-<div class="header-stat"><div class="num">100+</div><div class="label">问题迭代解决</div></div>
 <div class="header-stat"><div class="num">1个月</div><div class="label">从摸索到上线</div></div>
+<div class="header-stat"><div class="num">20人</div><div class="label">在线生产支撑</div></div>
+<div class="header-stat"><div class="num">10万+</div><div class="label">标注框 / 日</div></div>
 </div>
 </div>
 <div class="nav-bar">
 <a href="#phase1">📐 产品规划</a>
-<a href="#phase2">🔍 判断对不对·好不好</a>
-<a href="#phase3">🎨 产品实现</a>
-<a href="#phase3b">📦 开发全景</a>
-<a href="#phase4">🔧 问题排查</a>
-<a href="#phase4b">🔥 踩坑经验</a>
-<a href="#phase5">💡 总结</a>
+<a href="#phase2">🔍 迭代方法论</a>
+<a href="#phase3">📦 交付成果</a>
+<a href="#phase4">🔧 问题管理</a>
+<a href="#phase5">💡 方法论沉淀</a>
 </div>
 <div class="container">
-<div class="tip-bar">💡 本页截图/GIF 均来自飞书多维表格的真实问题记录附件。如图片无法加载，请在飞书中打开对应记录查看。</div>
+<div class="tip-bar">💡 本页所有截图 / GIF 均来自项目真实迭代记录，非模拟演示。</div>
 <!-- PHASE 1: 产品规划 -->
 <div class="section fade-in" id="phase1">
 <div class="section-title">📐 Phase 1：产品规划 — 先想清楚再动手</div>
@@ -235,8 +232,8 @@ img{cursor:zoom-in}
 
 <!-- PHASE 2: 判断对不对·好不好 -->
 <div class="section fade-in" id="phase2">
-<div class="section-title">🔍 Phase 2：判断"对不对"和"好不好" — 产品思维的核心能力</div>
-<p class="section-desc">AI 生成代码后，产品思维最重要的工作不是"看懂代码"，而是<strong>判断结果对不对、体验好不好</strong>。以下用飞书多维表格中的真实问题截图，展示我是怎么判断的、怎么把问题描述给 AI 的、以及多轮迭代直到满意的过程。</p>
+<div class="section-title">🔍 Phase 2：迭代方法论 — 判断“对不对”与“好不好”</div>
+<p class="section-desc">AI 生成代码后，产品思维最重要的工作不是"看懂代码"，而是<strong>判断结果对不对、体验好不好</strong>。以下用两个深度案例，完整展示“描述需求 → 判断对不对 → 判断好不好”的迭代节奏。更多功能 Bug 的测试与修复记录，见 <a href="#phase4" style="color:#4f46e5">Phase 4 问题管理</a>。</p>
 
 <div class="card">
 <h3>🔄 产品思维驱动 AI 的三步节奏</h3>
@@ -258,6 +255,8 @@ img{cursor:zoom-in}
 </div>
 </div>
 </div>
+
+<p style="font-size:13px;color:#666;margin:0 0 20px;text-align:center">案例轮次标记：<span style="color:#4f46e5;font-weight:600">🔵 提出需求 / 发现问题</span> → <span style="color:#d97706;font-weight:600">🟡 判断分析</span> → <span style="color:#059669;font-weight:600">🟢 验收通过</span></p>
 
 <!-- 案例 1：共边切割 5轮迭代 -->
 <div class="case-card">
@@ -334,73 +333,9 @@ img{cursor:zoom-in}
 </div>
 </div>
 
-<!-- 案例 3：标注功能Bug测试与修复（GIF录屏） -->
-<div class="case-card orange">
-<h3>📌 案例 3：标注功能 Bug 的测试与修复 — 用 GIF 录屏判断"到底哪里不对"</h3>
-<p style="font-size:14px;color:#555;margin-bottom:12px">标注功能开发完成后，我通过实际操作逐一测试，发现了多个功能 Bug。有些问题用文字描述不清楚，必须用截图甚至 GIF 录屏才能让 AI 准确理解并修复。</p>
-<div class="case-round">
-<h5>🔵 问题 1：打点后框体飘走（P0）</h5>
-<div class="img-row">
-<img src="images/recvgDAYD3n6b0_0.png" alt="框体飘走1">
-<img src="images/recvgDAYD3n6b0_1.png" alt="框体飘走2">
-<img src="images/recvgDAYD3n6b0_2.png" alt="框体飘走3">
-</div>
-<p class="img-note">▲ 飞书表格 Record 45 附件（3张）：打点标注后框体飘到物体外面，无法吸附边缘</p>
-</div>
-<div class="case-round r2">
-<h5>🟡 问题 2：用 GIF 录屏展示框体错乱（P0）</h5>
-<p><strong>我的描述：</strong>"围绕单一物体打点时标注结束后框体会飘到外面无法吸附并框体错乱。"——文字说不清楚"错乱"是什么样，所以我录了 GIF。</p>
-<div class="img-row"><img class="img-gif" src="images/recvgDBqUFz9z3_0.gif" alt="框体错乱GIF"></div>
-<p class="img-note">▲ 飞书表格 Record 46 附件（GIF 动图）：完整展示打点→框体飘走→错乱的全过程</p>
-<p style="margin-top:8px"><strong>产品判断：</strong>GIF 录屏让 AI 一次看懂问题，直接定位到坐标计算逻辑。</p>
-</div>
-<div class="case-round">
-<h5>🔵 问题 3：横穿物体后切割消失（P1，GIF）</h5>
-<div class="img-row"><img class="img-gif" src="images/recvgKnbvDvr5D_0.gif" alt="切割消失GIF"></div>
-<p class="img-note">▲ 飞书表格 Record 69 附件（GIF 动图）：横穿已标注物体后，切开的框消失了一个</p>
-</div>
-</div>
-
-<!-- 案例 4：权限 -->
-<div class="case-card">
-<h3>📌 案例 4：权限与用户管理 — 判断"谁能做什么"</h3>
-<div class="case-round">
-<h5>🔵 问题：权限选择器是空白的（P1）</h5>
-<p><strong>我的判断：</strong>"用户管理权限只有空白正方形，没有对应标注员、审核员、管理员的权限分配，而且选择完保存时报错。"</p>
-<div class="img-row">
-<img src="images/recvgc5X3AWqTW_0.jpg" alt="权限空白">
-<img src="images/recvgc5X3AWqTW_1.jpg" alt="保存报错">
-</div>
-<p class="img-note">▲ 飞书表格 Record 15 附件：权限选择器只有空白方块 + 保存时报错</p>
-</div>
-<div class="case-round r2">
-<h5>🟡 问题：账号切换功能需求（P0）</h5>
-<p><strong>我的需求描述：</strong>"admin 管理员账号可以免密码切换所有账号，普通管理员可以免密切换审核、标注账号，但不能免密切换同级管理员。"</p>
-<div class="img-row"><img src="images/recvgEQI71Gj0T_0.png" alt="账号切换"></div>
-<p class="img-note">▲ 飞书表格 Record 51 附件：我标注了账号切换功能应该放在哪里</p>
-</div>
-</div>
-
-<!-- 案例 5：数据导入 -->
-<div class="case-card green">
-<h3>📌 案例 5：数据导入 — 判断"结果对不对"</h3>
-<div class="case-round">
-<h5>🔵 问题：847 帧被拆成 45 个任务（P0）</h5>
-<div class="img-row">
-<img src="images/recvhBl1TuiKSk_0.png" alt="任务拆分">
-<img src="images/recvhBl1TuiKSk_1.png" alt="任务列表">
-</div>
-<p class="img-note">▲ 飞书表格 Record 81 附件：一个文件夹应该形成 1 个任务，却被拆成了 45 个</p>
-<p style="margin-top:8px"><strong>产品判断：</strong>AI 实现了导入功能，但没有理解"一个文件夹 = 一个任务"的业务规则。</p>
-</div>
-<div class="case-round r2">
-<h5>🟡 问题：导入后图片不显示（P0）</h5>
-<div class="img-row">
-<img src="images/recviPD9gfueNE_0.png" alt="图片不显示">
-<img src="images/recvlmOJXCBQkp_0.png" alt="黑色背景">
-</div>
-<p class="img-note">▲ 飞书表格 Record 85/100 附件：导入 JPG 数据后图像不显示 / 打开是黑色背景</p>
-</div>
+<div class="card" style="border-left:4px solid #4f46e5">
+<h3>🧪 系统性测试 → 23 个问题的完整记录见 Phase 4</h3>
+<p>除了上述两个深度案例，我还通过逐一实操测试，发现了标注算法、流程状态、权限管理、界面交互等 <strong>23 个具体问题</strong>（含多个 P0 级功能 Bug），并推动 AI 逐一修复验收。完整问题库、截图 / GIF 与解决方案，见 <a href="#phase4" style="color:#4f46e5">Phase 4：问题管理</a>。</p>
 </div>
 
 <div class="highlight-box">
@@ -415,8 +350,19 @@ img{cursor:zoom-in}
 
 <!-- PHASE 3: 产品实现 -->
 <div class="section fade-in" id="phase3">
-<div class="section-title">🎨 Phase 3：产品实现 — 最终交付的功能</div>
-<p class="section-desc">经过 1 个月迭代（含摸索期），平台从一张白纸变成了完整可用的标注系统。以下 6 大模块全部由 AI 编码实现，产品思维负责规划、验收和调优。</p>
+<div class="section-title">🎨 Phase 3：交付成果 — 从痛点到生产力</div>
+<p class="section-desc">经过 1 个月迭代（含摸索期），平台从一张白纸变成了完整可用的标注系统，并真正投入生产。先看结果，再看功能与开发全景。</p>
+<div class="card" style="border-top:4px solid #059669;margin-bottom:24px">
+<h3>📊 前后对比 — 痛点 → 方案 → 结果</h3>
+<table class="perm-table" style="text-align:left">
+<tr><th style="width:30%">😩 之前（单机工具时代）</th><th style="width:35%">🛠️ 平台解决方案</th><th style="width:35%">✅ 现在</th></tr>
+<tr><td>单机版工具，10 个标注员排队等 1 台机器</td><td>浏览器在线协作，多人同时作业</td><td><strong style="color:#059669">20 人同时在线生产</strong></td></tr>
+<tr><td>标完就交，没有审核环节，质量全靠自觉</td><td>帧级工作流：标注→提交→审核→通过/驳回</td><td><strong style="color:#059669">全链路质量可追踪</strong></td></tr>
+<tr><td>进度黑盒，管理者无法实时掌握</td><td>帧级状态 + 每日统计面板 + 排行榜</td><td><strong style="color:#059669">进度实时透明</strong></td></tr>
+<tr><td>数据散落各台电脑，汇总靠手动拷贝</td><td>OSS 云存储 + COCO/VOC/YOLO 一键导出</td><td><strong style="color:#059669">数据自动闭环</strong></td></tr>
+<tr><td>产量受限于单机串行</td><td>并行标注 + 批量领取 + 快捷键提效</td><td><strong style="color:#059669">日产 10 万+ 标注框</strong></td></tr>
+</table>
+</div>
 <div class="grid-3">
 <div class="feature-card"><div class="icon">🏷️</div><h4>标注工作台</h4><p>支持矩形框、多边形、语义分割、关键点、视频帧等多种标注方式。Canvas 高性能渲染，万级目标不卡顿。撤销/重做、快捷键、自动保存一应俱全。</p><div class="tags"><span class="tag">矩形框</span><span class="tag">多边形</span><span class="tag">语义分割</span><span class="tag">关键点</span><span class="tag">视频帧</span></div></div>
 <div class="feature-card"><div class="icon">✂️</div><h4>共边与切割</h4><p>多边形共边无缝隙、自动切割重叠区域、多框同时处理。817 行专用算法组件，经过 5 轮产品验收迭代打磨。</p><div class="tags"><span class="tag">共边</span><span class="tag">切割</span><span class="tag">重叠检测</span><span class="tag">精度控制</span></div></div>
@@ -430,13 +376,9 @@ img{cursor:zoom-in}
 <p><strong>访问地址：</strong><a href="http://apps.aiteam.aeroht.net:30050/cvat-user/login" target="_blank" style="color:#4f46e5">http://apps.aiteam.aeroht.net:30050/cvat-user/login</a></p>
 <p style="margin-top:8px;font-size:13px;color:#666">内网部署，Nginx 反向代理，支持多人同时在线标注。</p>
 </div>
-</div>
-<div class="divider"></div>
-
-<!-- PHASE 3B: 开发全景 -->
-<div class="section fade-in" id="phase3b">
-<div class="section-title">📦 开发全景 — 7 个阶段的完整拆解</div>
-<p class="section-desc">整个平台不是一次性"让 AI 写出来"的，而是拆成 <strong>7 个开发阶段</strong>，每个阶段有明确的输入输出和验收标准。</p>
+<div class="sub-section">
+<div class="sub-title">🗂️ 开发全景 — 7 个阶段的完整拆解</div>
+<p style="font-size:14px;color:#555;margin-bottom:16px">整个平台不是一次性"让 AI 写出来"的，而是拆成 <strong>7 个开发阶段</strong>，每个阶段有明确的输入输出和验收标准。</p>
 <div class="stats-row">
 <div class="stat-card purple"><div class="num">7</div><div class="label">开发阶段</div></div>
 <div class="stat-card green"><div class="num">4695+</div><div class="label">新增代码行</div></div>
@@ -570,12 +512,13 @@ img{cursor:zoom-in}
 </div>
 </div>
 </div>
+</div>
 <div class="divider"></div>
 
 <!-- PHASE 4: 问题排查 (part 1) -->
 <div class="section fade-in" id="phase4">
-<div class="section-title">🔧 Phase 4：问题排查 × AI 解决 — 真实迭代记录</div>
-<p class="section-desc">以下问题全部来自飞书多维表格的真实记录（100+ 条），配有实际截图/GIF。每个问题完整展示：<strong>现象 → 原因 → AI 解决 → 验证</strong>。</p>
+<div class="section-title">🔧 Phase 4：问题管理 — 100+ 问题的闭环迭代</div>
+<p class="section-desc">以下问题全部来自真实迭代记录（100+ 条），配有实际截图 / GIF。每个问题完整展示：<strong>现象 → 原因 → AI 解决 → 验证</strong>。可用下方标签按优先级、状态或类别筛选。</p>
 <div class="stats-row">
 <div class="stat-card purple"><div class="num">100+</div><div class="label">累计记录问题</div></div>
 <div class="stat-card green"><div class="num">75%</div><div class="label">已解决</div></div>
@@ -598,10 +541,14 @@ img{cursor:zoom-in}
 <div class="filter-tab" onclick="filterProblems('p2',this)">⚪ P2</div>
 <div class="filter-tab" onclick="filterProblems('solved',this)">✅ 已解决</div>
 <div class="filter-tab" onclick="filterProblems('stopped',this)">⏸ 停止优化</div>
+<div class="filter-tab" onclick="filterProblems('algo',this)">🎯 标注算法</div>
+<div class="filter-tab" onclick="filterProblems('flow',this)">📋 流程状态</div>
+<div class="filter-tab" onclick="filterProblems('perm',this)">🔐 权限用户</div>
+<div class="filter-tab" onclick="filterProblems('ui',this)">🖥️ 界面体验</div>
 </div>
 <div class="problem-list" id="problemList">
 
-<div class="problem-item p0" data-priority="p0" data-status="solved">
+<div class="problem-item p0" data-priority="p0" data-category="algo" data-status="solved">
 <div class="problem-header"><span class="priority-tag p0">P0</span><span class="problem-title">打点标注后框体飘走无法吸附</span><span class="status-tag solved">已解决</span></div>
 <div class="img-row"><img src="images/recvgDAYD3n6b0_0.png" alt=""><img src="images/recvgDAYD3n6b0_1.png" alt=""><img src="images/recvgDAYD3n6b0_2.png" alt=""></div>
 <div class="detail-block"><span class="detail-label cause">🔍 原因</span>闭合时吸附逻辑用了错误坐标系。屏幕坐标 vs 画布坐标在缩放下有偏移。</div>
@@ -609,7 +556,7 @@ img{cursor:zoom-in}
 <div class="detail-block"><span class="detail-label ai-input">💬 给 AI</span><div class="ai-input-box">围绕建筑物打点，闭合后框体飘走（附3张截图）。200%以上必现。应该是坐标转换问题。</div></div>
 </div>
 
-<div class="problem-item p0" data-priority="p0" data-status="solved">
+<div class="problem-item p0" data-priority="p0" data-category="algo" data-status="solved">
 <div class="problem-header"><span class="priority-tag p0">P0</span><span class="problem-title">打点后框体错乱（GIF）</span><span class="status-tag solved">已解决</span></div>
 <div class="img-row"><img class="img-gif" src="images/recvgDBqUFz9z3_0.gif" alt=""></div>
 <p class="img-note">▲ GIF：打点→框体飘走→错乱全过程</p>
@@ -617,146 +564,146 @@ img{cursor:zoom-in}
 <div class="detail-block"><span class="detail-label solution">✅ 方案</span>每次打点同步更新数组；撤销用完整快照；闭合前校验顺序。</div>
 </div>
 
-<div class="problem-item p0" data-priority="p0" data-status="solved">
+<div class="problem-item p0" data-priority="p0" data-category="algo" data-status="solved">
 <div class="problem-header"><span class="priority-tag p0">P0</span><span class="problem-title">画大框无法贴边，区域无法填充</span><span class="status-tag solved">已解决</span></div>
 <div class="img-row"><img src="images/recvgDBzCFb9Mm_0.png" alt=""></div>
 <div class="detail-block"><span class="detail-label cause">🔍 原因</span>吸附阈值 1px 太小，且只检测顶点不检测边。</div>
 <div class="detail-block"><span class="detail-label solution">✅ 方案</span>阈值改 8px；增加边吸附；Shift 关闭吸附。</div>
 </div>
 
-<div class="problem-item p0" data-priority="p0" data-status="solved">
+<div class="problem-item p0" data-priority="p0" data-category="algo" data-status="solved">
 <div class="problem-header"><span class="priority-tag p0">P0</span><span class="problem-title">内部物体切割导致框体错乱</span><span class="status-tag solved">已解决</span></div>
 <div class="img-row"><img src="images/recvgDCUtHgMd5_0.png" alt=""></div>
 <div class="detail-block"><span class="detail-label cause">🔍 原因</span>切割算法没处理<strong>"完全包含"</strong>情况。内部切割需要带孔洞多边形。</div>
 <div class="detail-block"><span class="detail-label solution">✅ 方案</span>增加内部切割分支：外框生成外环+内环 path。</div>
 </div>
 
-<div class="problem-item p0" data-priority="p0" data-status="solved">
+<div class="problem-item p0" data-priority="p0" data-category="flow" data-status="solved">
 <div class="problem-header"><span class="priority-tag p0">P0</span><span class="problem-title">帧列表只显示自己已领取的帧</span><span class="status-tag solved">已解决</span></div>
 <div class="img-row"><img src="images/recvgEuNkH4gr9_0.png" alt=""><img src="images/recvgEuNkH4gr9_1.png" alt=""></div>
 <div class="detail-block"><span class="detail-label cause">🔍 原因</span>帧列表 API 没按角色过滤。标注员看到了别人的帧。</div>
 <div class="detail-block"><span class="detail-label solution">✅ 方案</span>标注员 filter(assignee=user)，审核员 filter(reviewer=user)，管理员不过滤。</div>
 </div>
 
-<div class="problem-item p0" data-priority="p0" data-status="solved">
+<div class="problem-item p0" data-priority="p0" data-category="perm" data-status="solved">
 <div class="problem-header"><span class="priority-tag p0">P0</span><span class="problem-title">管理员账号切换功能</span><span class="status-tag solved">已解决</span></div>
 <div class="img-row"><img src="images/recvgEQI71Gj0T_0.png" alt=""></div>
 <div class="detail-block"><span class="detail-label cause">🔍 原因</span>CVAT 原生不支持账号切换。需新增 API + UI + 权限校验。</div>
 <div class="detail-block"><span class="detail-label solution">✅ 方案</span>switch_user API + 切换按钮。admin 免密切所有人，普通管理员免密切审核/标注，同级需密码。</div>
 </div>
 
-<div class="problem-item p0" data-priority="p0" data-status="solved">
+<div class="problem-item p0" data-priority="p0" data-category="flow" data-status="solved">
 <div class="problem-header"><span class="priority-tag p0">P0</span><span class="problem-title">导入 847 帧被拆成 45 个任务</span><span class="status-tag solved">已解决</span></div>
 <div class="img-row"><img src="images/recvhBl1TuiKSk_0.png" alt=""><img src="images/recvhBl1TuiKSk_1.png" alt=""></div>
 <div class="detail-block"><span class="detail-label cause">🔍 原因</span>OSS 导入把<strong>子目录当成独立任务</strong>。45 个子目录 = 45 个任务。</div>
 <div class="detail-block"><span class="detail-label solution">✅ 方案</span>递归遍历合并为 1 个任务；添加导入预览确认。</div>
 </div>
 
-<div class="problem-item p0" data-priority="p0" data-status="solved">
+<div class="problem-item p0" data-priority="p0" data-category="flow" data-status="solved">
 <div class="problem-header"><span class="priority-tag p0">P0</span><span class="problem-title">分配标注员和开始标注均报错</span><span class="status-tag solved">已解决</span></div>
 <div class="img-row"><img src="images/recviPBoMas5fT_0.png" alt=""><img src="images/recviPBoMas5fT_1.png" alt=""></div>
 <div class="detail-block"><span class="detail-label cause">🔍 原因</span>API 500，KeyError: 'assignee'。<strong>FrameStatus 表不存在</strong>，迁移没执行。</div>
 <div class="detail-block"><span class="detail-label solution">✅ 方案</span>执行 migrate；启动脚本加自动迁移检查。</div>
 </div>
 
-<div class="problem-item p0" data-priority="p0" data-status="solved">
+<div class="problem-item p0" data-priority="p0" data-category="flow" data-status="solved">
 <div class="problem-header"><span class="priority-tag p0">P0</span><span class="problem-title">无法新建任务（GIF）</span><span class="status-tag solved">已解决</span></div>
 <div class="img-row"><img class="img-gif" src="images/recvlgdvyMNucF_0.gif" alt=""></div>
 <div class="detail-block"><span class="detail-label cause">🔍 原因</span>数据源下拉框没加载，表单校验不通过但<strong>没显示错误提示</strong>。</div>
 <div class="detail-block"><span class="detail-label solution">✅ 方案</span>修复 API 路径；校验失败显示红色错误；按钮 disabled。</div>
 </div>
 
-<div class="problem-item p0" data-priority="p0" data-status="solved">
+<div class="problem-item p0" data-priority="p0" data-category="flow" data-status="solved">
 <div class="problem-header"><span class="priority-tag p0">P0</span><span class="problem-title">打开黑色背景无法加载图片</span><span class="status-tag solved">已解决</span></div>
 <div class="img-row"><img src="images/recvlmOJXCBQkp_0.png" alt=""></div>
 <div class="detail-block"><span class="detail-label cause">🔍 原因</span><strong>ossfs 文件权限不对</strong>。Django 用户读不了 /oss/ 下的 JPG。chunk 创建静默失败。</div>
 <div class="detail-block"><span class="detail-label solution">✅ 方案</span>ossfs 加 allow_other + umask=022；chunk 失败返回错误；前端显示"加载失败"。</div>
 </div>
 
-<div class="problem-item p0" data-priority="p0" data-status="solved">
+<div class="problem-item p0" data-priority="p0" data-category="algo" data-status="solved">
 <div class="problem-header"><span class="priority-tag p0">P0</span><span class="problem-title">大范围元素中间添加标注会裁掉另一边</span><span class="status-tag solved">已解决</span></div>
 <div class="img-row"><img src="images/recvgKxS5PRFsr_0.png" alt=""><img src="images/recvgKxS5PRFsr_1.png" alt=""></div>
 <div class="detail-block"><span class="detail-label cause">🔍 原因</span>切割算法多交点时<strong>只取了前两个</strong>，大框被错误截断。</div>
 <div class="detail-block"><span class="detail-label solution">✅ 方案</span>重写：收集所有交点→排序→生成正确子多边形。</div>
 </div>
 
-<div class="problem-item p0" data-priority="p0" data-status="solved">
+<div class="problem-item p0" data-priority="p0" data-category="algo" data-status="solved">
 <div class="problem-header"><span class="priority-tag p0">P0</span><span class="problem-title">大框标注完成时框体不形成，更替旧元素</span><span class="status-tag solved">已解决</span></div>
 <div class="img-row"><img src="images/recvgKxJRaadFN_0.png" alt=""><img src="images/recvgKxJRaadFN_1.png" alt=""></div>
 <div class="detail-block"><span class="detail-label cause">🔍 原因</span>自动切割在闭合时触发，切割结果<strong>覆盖了新框本身</strong>。</div>
 <div class="detail-block"><span class="detail-label solution">✅ 方案</span>闭合时先完成新框创建，再执行切割。切割只影响旧框。</div>
 </div>
 
-<div class="problem-item p0" data-priority="p0" data-status="solved">
+<div class="problem-item p0" data-priority="p0" data-category="algo" data-status="solved">
 <div class="problem-header"><span class="priority-tag p0">P0</span><span class="problem-title">吸附导致无法在已有物体旁边标注</span><span class="status-tag solved">已解决</span></div>
 <div class="img-row"><img src="images/recvgJtYL5MhXP_0.png" alt=""></div>
 <div class="detail-block"><span class="detail-label cause">🔍 原因</span>吸附把新点强制拉到旧框顶点，<strong>新旧点完全重合</strong>。</div>
 <div class="detail-block"><span class="detail-label solution">✅ 方案</span>吸附只在"共边模式"下生效；普通模式不触发；加 5px 死区。</div>
 </div>
 
-<div class="problem-item p1" data-priority="p1" data-status="solved">
+<div class="problem-item p1" data-priority="p1" data-category="algo" data-status="solved">
 <div class="problem-header"><span class="priority-tag p1">P1</span><span class="problem-title">切割后框体收缩变形</span><span class="status-tag solved">已解决</span></div>
 <div class="img-row"><img src="images/recvglYLo3iaP7_0.png" alt=""><img src="images/recvglYLo3iaP7_1.png" alt=""></div>
 <div class="detail-block"><span class="detail-label cause">🔍 原因</span>交点计算<strong>浮点精度问题</strong> + 只处理第一个重叠框。</div>
 <div class="detail-block"><span class="detail-label solution">✅ 方案</span>epsilon 容差 1e-6；遍历所有重叠框；切割后校验面积。</div>
 </div>
 
-<div class="problem-item p1" data-priority="p1" data-status="solved">
+<div class="problem-item p1" data-priority="p1" data-category="algo" data-status="solved">
 <div class="problem-header"><span class="priority-tag p1">P1</span><span class="problem-title">新框自动切割旧物体</span><span class="status-tag solved">已解决</span></div>
 <div class="img-row"><img src="images/recvgJtPVz2jdb_0.png" alt=""><img src="images/recvgJtPVz2jdb_1.png" alt=""></div>
 <div class="detail-block"><span class="detail-label cause">🔍 原因</span>自动共边逻辑过于激进，<strong>任何重叠都触发切割</strong>。</div>
 <div class="detail-block"><span class="detail-label solution">✅ 方案</span>默认关闭自动切割，只提示重叠；手动点按钮才切割。</div>
 </div>
 
-<div class="problem-item p1" data-priority="p1" data-status="solved">
+<div class="problem-item p1" data-priority="p1" data-category="flow" data-status="solved">
 <div class="problem-header"><span class="priority-tag p1">P1</span><span class="problem-title">批注结果需放在框体里面</span><span class="status-tag solved">已解决</span></div>
 <div class="img-row"><img src="images/recvgFpckh4Mb3_0.png" alt=""></div>
 <div class="detail-block"><span class="detail-label cause">🔍 原因</span>CVAT 原生 Issue 在侧边栏，没与画布框体关联。</div>
 <div class="detail-block"><span class="detail-label solution">✅ 方案</span>Canvas 层添加批注气泡，点击框体在中心显示批注。</div>
 </div>
 
-<div class="problem-item p1" data-priority="p1" data-status="solved">
+<div class="problem-item p1" data-priority="p1" data-category="flow" data-status="solved">
 <div class="problem-header"><span class="priority-tag p1">P1</span><span class="problem-title">属性框显示/隐藏 + 一键领取/解绑</span><span class="status-tag solved">已解决</span></div>
 <div class="img-row"><img src="images/recvjELtasU4tO_0.png" alt=""><img src="images/recvjEMibLaVV0_0.png" alt=""></div>
 <div class="detail-block"><span class="detail-label cause">🔍 原因</span>多种框叠在一起无法单独查看；逐帧领取效率太低。</div>
 <div class="detail-block"><span class="detail-label solution">✅ 方案</span>标签眼睛图标控制显隐（单图/持续）；勾选/全选→一键领取/解绑。</div>
 </div>
 
-<div class="problem-item p1" data-priority="p1" data-status="solved">
+<div class="problem-item p1" data-priority="p1" data-category="algo" data-status="solved">
 <div class="problem-header"><span class="priority-tag p1">P1</span><span class="problem-title">横穿物体后切开的框消失（GIF）</span><span class="status-tag solved">已解决</span></div>
 <div class="img-row"><img class="img-gif" src="images/recvgKnbvDvr5D_0.gif" alt=""></div>
 <div class="detail-block"><span class="detail-label cause">🔍 原因</span>切割后子多边形面积小于阈值被自动删除。</div>
 <div class="detail-block"><span class="detail-label solution">✅ 方案</span>取消最小面积阈值；两个子多边形都保留；添加撤销。</div>
 </div>
 
-<div class="problem-item p1" data-priority="p1" data-status="solved">
+<div class="problem-item p1" data-priority="p1" data-category="perm" data-status="solved">
 <div class="problem-header"><span class="priority-tag p1">P1</span><span class="problem-title">用户管理权限只有空白正方形</span><span class="status-tag solved">已解决</span></div>
 <div class="img-row"><img src="images/recvgc5X3AWqTW_0.jpg" alt=""><img src="images/recvgc5X3AWqTW_1.jpg" alt=""></div>
 <div class="detail-block"><span class="detail-label cause">🔍 原因</span>checkbox 组件渲染失败，权限选择器只有空白方块。</div>
 <div class="detail-block"><span class="detail-label solution">✅ 方案</span>替换为原生 checkbox + 自定义样式；保存时校验至少选一个角色。</div>
 </div>
 
-<div class="problem-item p1" data-priority="p1" data-status="solved">
+<div class="problem-item p1" data-priority="p1" data-category="flow" data-status="solved">
 <div class="problem-header"><span class="priority-tag p1">P1</span><span class="problem-title">提交后状态仍显示"待领取"</span><span class="status-tag solved">已解决</span></div>
 <div class="img-row"><img src="images/recvghuS8rJetP_0.png" alt=""></div>
 <div class="detail-block"><span class="detail-label cause">🔍 原因</span>提交按钮没有联动状态机，帧状态未从 unclaimed 变为 review_pending。</div>
 <div class="detail-block"><span class="detail-label solution">✅ 方案</span>提交 API 中同步更新 FrameStatus；前端刷新状态标签。</div>
 </div>
 
-<div class="problem-item p2" data-priority="p2" data-status="stopped">
+<div class="problem-item p2" data-priority="p2" data-category="ui" data-status="stopped">
 <div class="problem-header"><span class="priority-tag p2">P2</span><span class="problem-title">作业界面筛选功能使用会卡死</span><span class="status-tag stopped">停止优化</span></div>
 <div class="img-row"><img src="images/recvgc6bgcA8c4_0.jpg" alt=""></div>
 <div class="detail-block"><span class="detail-label cause">🔍 原因</span>antd Table 组件与 CVAT 渲染管线冲突（详见踩坑经验坑 1）。</div>
 <div class="detail-block"><span class="detail-label solution">⏸ 决策</span>放弃 antd Table 筛选，保留原始 Card 布局。<strong>产品思维的取舍：稳定 > 美观。</strong></div>
 </div>
 
-<div class="problem-item p2" data-priority="p2" data-status="stopped">
+<div class="problem-item p2" data-priority="p2" data-category="ui" data-status="stopped">
 <div class="problem-header"><span class="priority-tag p2">P2</span><span class="problem-title">标签编辑界面没办法编辑标签 ID</span><span class="status-tag stopped">停止优化</span></div>
 <div class="img-row"><img src="images/recvghtEDN9ing_0.png" alt=""></div>
 <div class="detail-block"><span class="detail-label solution">⏸ 决策</span>标签 ID 由系统自动生成，手动编辑容易导致数据不一致。非核心需求，停止优化。</div>
 </div>
 
-<div class="problem-item p2" data-priority="p2" data-status="stopped">
+<div class="problem-item p2" data-priority="p2" data-category="algo" data-status="stopped">
 <div class="problem-header"><span class="priority-tag p2">P2</span><span class="problem-title">标注一个元素途中经过两个属性只共边一个</span><span class="status-tag stopped">停止优化</span></div>
 <div class="img-row"><img src="images/recvgKpvmDuSmi_0.jpg" alt=""></div>
 <div class="detail-block"><span class="detail-label cause">🔍 原因</span>多属性同时共边需要复杂的多边形布尔运算，算法复杂度极高。</div>
@@ -780,12 +727,9 @@ img{cursor:zoom-in}
 </div>
 </div>
 </div>
-<div class="divider"></div>
-
-<!-- PHASE 4B: 踩坑经验 -->
-<div class="section fade-in" id="phase4b">
-<div class="section-title">🔥 踩坑经验 — 10 个真实深坑与产品决策</div>
-<p class="section-desc">这些不是"小 bug"，而是<strong>架构级的坑</strong>——每一个都可能导致项目方向调整。产品思维的价值在于：遇到坑时快速判断"绕过去"还是"填上它"。</p>
+<div class="sub-section">
+<div class="sub-title">🔥 踩坑经验 — 10 个真实深坑与产品决策</div>
+<p style="font-size:14px;color:#555;margin-bottom:16px">这些不是“小 bug”，而是<strong>架构级的坑</strong>——每一个都可能导致项目方向调整。产品思维的价值在于：遇到坑时快速判断“绕过去”还是“填上它”。</p>
 <div class="problem-list">
 
 <div class="problem-item p0" data-priority="p0" data-status="solved">
@@ -874,7 +818,7 @@ img{cursor:zoom-in}
 
 <!-- PHASE 5: 总结 -->
 <div class="section fade-in" id="phase5">
-<div class="section-title">💡 Phase 5：总结 — 方法论与心得</div>
+<div class="section-title">💡 Phase 5：方法论沉淀</div>
 <p class="section-desc">这个项目验证了一个核心命题：<strong>产品思维 + AI = 独立交付能力</strong>。关键不在于 AI 多强，而在于产品思维的规划质量决定了 AI 的产出质量。</p>
 
 <div class="method-grid">
@@ -884,15 +828,13 @@ img{cursor:zoom-in}
 </div>
 
 <div class="sub-section">
-<div class="sub-title">📝 七条关键心得</div>
+<div class="sub-title">📝 五条关键心得</div>
 <div class="insight-list">
-<div class="insight-item"><div class="inum">1</div><div><strong>描述"要什么"比"怎么做"重要 10 倍。</strong>"我需要一个项目级权限系统，标注员只能看到自己的作业"比"帮我写一个 Django middleware"有效得多。</div></div>
-<div class="insight-item"><div class="inum">2</div><div><strong>截图和 GIF 是最好的需求文档。</strong>遇到问题不要慌，截图/录屏 + 复现步骤 + 期望效果，这三样给 AI 就能解决 80% 的 bug。就像看医生，你不需要自己诊断，只需要说清楚"哪里疼"。</div></div>
+<div class="insight-item"><div class="inum">1</div><div><strong>描述“要什么”比“怎么做”重要 10 倍。</strong>“我需要一个项目级权限系统，标注员只能看到自己的作业”比“帮我写一个 Django middleware”有效得多。</div></div>
+<div class="insight-item"><div class="inum">2</div><div><strong>截图和 GIF 是最好的需求文档。</strong>遇到问题不要慌，截图/录屏 + 复现步骤 + 期望效果，这三样给 AI 就能解决 80% 的 bug。就像看医生，你不需要自己诊断，只需要说清楚“哪里疼”。</div></div>
 <div class="insight-item"><div class="inum">3</div><div><strong>技术选型是产品思维最重要的决策。</strong>选 CVAT 而不是自研，省了 3 个月。选型核心：成熟度 × 可定制性 × 部署灵活性。</div></div>
-<div class="insight-item"><div class="inum">4</div><div><strong>用飞书表格管理问题，形成闭环。</strong>每个问题记录优先级、状态、截图、解决方案。100+ 条记录就是最真实的迭代日志，也是给 AI 的"上下文记忆"。</div></div>
-<div class="insight-item"><div class="inum">5</div><div><strong>接受"停止优化"是一种能力。</strong>暗色主题、极端兼容性这些边缘场景，果断标记"停止优化"。产品思维的取舍比执行更重要。</div></div>
-<div class="insight-item"><div class="inum">6</div><div><strong>让 AI 做全局排查。</strong>每次修复时追加"帮我全局排查类似问题"。一次对话解决一类问题，效率翻倍。</div></div>
-<div class="insight-item"><div class="inum">7</div><div><strong>判断"对不对"和"好不好"是两种能力。</strong>"对不对"是功能验证，"好不好"是体验判断。AI 能保证"对"，但只有产品思维能判断"好"。</div></div>
+<div class="insight-item"><div class="inum">4</div><div><strong>用飞书表格管理问题，形成闭环。</strong>每个问题记录优先级、状态、截图、解决方案，修复时追加“帮我全局排查类似问题”。100+ 条记录就是最真实的迭代日志，也是给 AI 的“上下文记忆”。</div></div>
+<div class="insight-item"><div class="inum">5</div><div><strong>“对不对”和“好不好”是两种能力，取舍比执行更重要。</strong>AI 能保证“对”，但只有产品思维能判断“好”。而暗色主题、极端兼容性这类边缘场景，果断“停止优化”——产品的取舍比执行更见功力。</div></div>
 </div>
 </div>
 
@@ -909,64 +851,56 @@ img{cursor:zoom-in}
 </div>
 
 <div class="sub-section">
-<div class="sub-title">🔑 关键技术决策回顾</div>
+<div class="sub-title">🔑 关键决策与风险</div>
+<div class="grid-2">
 <div class="card">
-<table class="perm-table" style="text-align:left;font-size:13px">
-<tr><th>决策点</th><th>选择</th><th>产品思维的判断依据</th><th>效果</th></tr>
-<tr><td>标注引擎</td><td>CVAT 二次开发</td><td>自研 3-6 个月，用开源省时间</td><td>✅</td></tr>
-<tr><td>管理平台</td><td>自建 CVAT-DO</td><td>CVAT 管理功能弱，企业需求必须自建</td><td>✅</td></tr>
-<tr><td>部署方式</td><td>virtualenv 非 Docker</td><td>ossfs 环境下 Docker 不稳定</td><td>✅</td></tr>
-<tr><td>汉化方案</td><td>运行时 DOM 翻译</td><td>不改源码 = 上游升级不冲突</td><td>✅</td></tr>
-<tr><td>独立管理页面</td><td>纯 HTML+JS</td><td>低频功能不需要 React 全家桶</td><td>✅</td></tr>
-<tr><td>权限架构</td><td>OPA 全局 + 应用层帧级</td><td>不同粒度用不同机制</td><td>✅</td></tr>
+<h3>✅ 六个关键技术决策</h3>
+<table class="perm-table" style="text-align:left;font-size:12px">
+<tr><th>决策点</th><th>选择</th><th>判断依据</th></tr>
+<tr><td>标注引擎</td><td>CVAT 二次开发</td><td>自研 3-6 个月，用开源省时间</td></tr>
+<tr><td>管理平台</td><td>自建 CVAT-DO</td><td>CVAT 管理功能弱，企业需求必须自建</td></tr>
+<tr><td>部署方式</td><td>virtualenv 非 Docker</td><td>ossfs 环境下 Docker 不稳定</td></tr>
+<tr><td>汉化方案</td><td>运行时 DOM 翻译</td><td>不改源码 = 上游升级不冲突</td></tr>
+<tr><td>独立管理页面</td><td>纯 HTML+JS</td><td>低频功能不需要 React 全家桶</td></tr>
+<tr><td>权限架构</td><td>OPA 全局 + 应用层帧级</td><td>不同粒度用不同机制</td></tr>
 </table>
 </div>
-</div>
-
-<div class="sub-section">
-<div class="sub-title">⚠️ 需注意的风险</div>
 <div class="card">
-<ul style="font-size:14px;color:#444;line-height:2">
-<li><strong>CVAT 升级合并成本</strong>：53+ 文件修改，上游升级时合并冲突不可避免。应对：汉化用运行时注入（已解耦），后端用独立文件（已隔离）</li>
-<li><strong>Ant Design 兼容性</strong>：antd 内部渲染与自定义逻辑可能冲突。应对：核心交互区域避免 antd 复杂组件</li>
-<li><strong>ossfs 性能瓶颈</strong>：FUSE I/O 延迟是本地 5-10 倍。应对：超时已调大，产品层面管理预期</li>
+<h3>⚠️ 已识别风险与应对</h3>
+<ul style="font-size:13px;color:#444;line-height:1.9">
+<li><strong>CVAT 升级合并成本</strong>：53+ 文件修改，上游升级时合并冲突不可避免。应对：汉化运行时注入（已解耦）、后端独立文件（已隔离）</li>
+<li><strong>Ant Design 兼容性</strong>：antd 内部渲染与自定义逻辑可能冲突。应对：核心交互区避免 antd 复杂组件</li>
+<li><strong>ossfs 性能瓶颈</strong>：FUSE I/O 延迟是本地 5-10 倍。应对：超时调大 + 产品层面管理预期</li>
 <li><strong>汉化脚本维护</strong>：CVAT 更新后新英文需持续补充。应对：翻译拾取器让标注员自助添加</li>
 </ul>
 </div>
 </div>
+</div>
 
 <div class="sub-section">
-<div class="sub-title">🚀 最终效果</div>
+<div class="sub-title">🚀 成果与展望</div>
 <div class="card" style="background:linear-gradient(135deg,#f0f0ff,#faf5ff);border:1px solid #c7d2fe">
 <div class="grid-4" style="margin-top:4px">
-<div style="text-align:center"><div style="font-size:28px;font-weight:700;color:#4f46e5">1 个月</div><div style="font-size:12px;color:#666">从摸索到上线</div></div>
-<div style="text-align:center"><div style="font-size:28px;font-weight:700;color:#4f46e5">0 行</div><div style="font-size:12px;color:#666">手写代码</div></div>
-<div style="text-align:center"><div style="font-size:28px;font-weight:700;color:#4f46e5">100+</div><div style="font-size:12px;color:#666">问题闭环解决</div></div>
-<div style="text-align:center"><div style="font-size:28px;font-weight:700;color:#4f46e5">10+</div><div style="font-size:12px;color:#666">标注员日常使用</div></div>
+<div style="text-align:center"><div style="font-size:26px;font-weight:700;color:#4f46e5">1 个月</div><div style="font-size:12px;color:#666">从摸索到上线</div></div>
+<div style="text-align:center"><div style="font-size:26px;font-weight:700;color:#4f46e5">0 行</div><div style="font-size:12px;color:#666">手写代码</div></div>
+<div style="text-align:center"><div style="font-size:26px;font-weight:700;color:#4f46e5">20 人</div><div style="font-size:12px;color:#666">在线生产支撑</div></div>
+<div style="text-align:center"><div style="font-size:26px;font-weight:700;color:#4f46e5">10 万+</div><div style="font-size:12px;color:#666">标注框 / 日</div></div>
 </div>
-<div style="margin-top:24px;text-align:center">
-<p style="font-size:16px;color:#444;line-height:2">
-产品思维负责<strong>想清楚</strong>，AI 负责<strong>做出来</strong>。<br>
-这不是"替代开发"，而是<strong>让产品思维直接变成产品</strong>。<br>
-<span style="font-size:14px;color:#666">规划的质量决定了 AI 产出的质量，验收的标准决定了产品的下限。</span>
+<div class="grid-3" style="margin-top:20px">
+<div style="padding:14px;background:#fff;border-radius:8px;text-align:center"><h4 style="font-size:13px;margin-bottom:4px">📋 定义问题</h4><p style="font-size:12px;color:#666;line-height:1.6">用产品语言写清楚：谁、什么场景、什么问题、验收标准。</p></div>
+<div style="padding:14px;background:#fff;border-radius:8px;text-align:center"><h4 style="font-size:13px;margin-bottom:4px">🤖 AI 执行</h4><p style="font-size:12px;color:#666;line-height:1.6">把需求给 AI 生成代码/配置。不需看懂每行，只需验证效果。</p></div>
+<div style="padding:14px;background:#fff;border-radius:8px;text-align:center"><h4 style="font-size:13px;margin-bottom:4px">🔄 迭代闭环</h4><p style="font-size:12px;color:#666;line-height:1.6">发现问题→截图描述→AI 修复→验证→记录。循环直到验收通过。</p></div>
+</div>
+<div style="margin-top:20px;text-align:center">
+<p style="font-size:15px;color:#444;line-height:2">
+产品思维负责<strong>想清楚</strong>，AI 负责<strong>做出来</strong>。这不是“替代开发”，而是<strong>让产品思维直接变成产品</strong>。<br>
+<span style="font-size:13px;color:#666">核心公式：清晰的产品规划 × AI 的执行力 × 持续的迭代验证 = 独立交付能力</span>
 </p>
 </div>
 </div>
 </div>
 
-<div class="sub-section">
-<div class="sub-title">🔮 可复制的方法论</div>
-<div class="card">
-<div class="grid-3">
-<div style="padding:16px;background:#f9fafb;border-radius:8px"><h4 style="font-size:14px;margin-bottom:6px">📋 第一步：定义问题</h4><p style="font-size:12px;color:#666;line-height:1.7">用产品语言写清楚：谁在什么场景下遇到什么问题，期望方案是什么，验收标准是什么。</p></div>
-<div style="padding:16px;background:#f9fafb;border-radius:8px"><h4 style="font-size:14px;margin-bottom:6px">🤖 第二步：AI 执行</h4><p style="font-size:12px;color:#666;line-height:1.7">把需求给 AI，让它生成代码/配置/文档。不需要看懂每一行，只需要验证效果。</p></div>
-<div style="padding:16px;background:#f9fafb;border-radius:8px"><h4 style="font-size:14px;margin-bottom:6px">🔄 第三步：迭代闭环</h4><p style="font-size:12px;color:#666;line-height:1.7">发现问题 → 截图描述 → AI 修复 → 验证 → 记录到飞书。循环往复直到验收通过。</p></div>
 </div>
-<p style="margin-top:16px;font-size:14px;color:#4f46e5;font-weight:500;text-align:center">核心公式：清晰的产品规划 × AI 的执行力 × 持续的迭代验证 = 独立交付能力</p>
-</div>
-</div>
-</div>
-
 </div>
 <div class="footer">产品思维 × AI · 数据标注平台项目复盘</div>
 <script>
@@ -978,7 +912,8 @@ if(type==='solved')el.classList.add('active-green');else if(type==='p0')el.class
 document.querySelectorAll('#problemList .problem-item').forEach(item=>{
 if(type==='all'){item.style.display='';return}
 if(type==='solved'||type==='stopped'){item.style.display=item.dataset.status===type?'':'none'}
-else{item.style.display=item.dataset.priority===type?'':'none'}
+else if(type==='p0'||type==='p1'||type==='p2'){item.style.display=item.dataset.priority===type?'':'none'}
+else{item.style.display=item.dataset.category===type?'':'none'}
 });
 }
 </script>
