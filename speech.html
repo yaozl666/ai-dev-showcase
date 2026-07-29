@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>演讲对照稿 · 产品思维 × AI</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;background:#f5f6fa;color:#1a1a1a;line-height:1.8}
+.top-bar{position:sticky;top:0;z-index:100;background:rgba(30,27,75,.97);backdrop-filter:blur(8px);color:#fff;padding:10px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.top-bar .brand{font-size:15px;font-weight:700;letter-spacing:1px}
+.top-bar a.demo-link{background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;text-decoration:none;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:600;transition:transform .15s}
+.top-bar a.demo-link:hover{transform:scale(1.05)}
+.top-bar .dur{font-size:12px;opacity:.75;margin-left:auto}
+.top-nav{display:flex;gap:4px;flex-wrap:wrap;width:100%}
+.top-nav a{color:#c7d2fe;text-decoration:none;font-size:12px;padding:3px 10px;border-radius:12px;transition:all .2s}
+.top-nav a:hover{background:rgba(255,255,255,.15);color:#fff}
+.hero{background:linear-gradient(135deg,#312e81,#4c1d95);color:#fff;padding:48px 24px 40px;text-align:center}
+.hero h1{font-size:30px;font-weight:700;letter-spacing:2px;margin-bottom:10px}
+.hero p{font-size:14px;opacity:.85;max-width:760px;margin:0 auto 20px;line-height:1.9}
+.howto{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;max-width:900px;margin:0 auto}
+.howto-item{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:12px 18px;font-size:13px;max-width:270px;text-align:left}
+.howto-item b{display:block;margin-bottom:4px;font-size:13px}
+.container{max-width:960px;margin:0 auto;padding:24px 20px 60px}
+.glossary{background:#fff;border-radius:14px;box-shadow:0 1px 4px rgba(0,0,0,.08);margin-bottom:36px;overflow:hidden}
+.glossary>summary{padding:18px 24px;font-size:17px;font-weight:700;cursor:pointer;background:linear-gradient(135deg,#fef3c7,#fde68a);list-style:none;display:flex;align-items:center;gap:10px}
+.glossary>summary::after{content:'▼';font-size:11px;margin-left:auto;transition:transform .2s;color:#92400e}
+.glossary[open]>summary::after{transform:rotate(180deg)}
+.glossary .g-body{padding:20px 24px}
+.g-group{margin-bottom:18px}
+.g-group h4{font-size:14px;font-weight:700;color:#4f46e5;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid #e5e7eb}
+.term{background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px;padding:12px 16px;margin-bottom:10px}
+.term .t-name{font-size:14px;font-weight:700;color:#1e1b4b}
+.term .t-pron{font-size:12px;color:#7c3aed;background:#f3e8ff;padding:1px 8px;border-radius:10px;margin-left:8px;font-weight:500}
+.term .t-en{font-size:11px;color:#9ca3af;margin-left:6px}
+.term .t-desc{font-size:13px;color:#444;margin-top:6px;line-height:1.8}
+.phase-block{margin-bottom:44px}
+.phase-header{border-radius:14px;padding:20px 24px;color:#fff;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.phase-header .ph-icon{font-size:28px}
+.phase-header h2{font-size:21px;font-weight:700;flex:1}
+.phase-header .ph-dur{background:rgba(255,255,255,.22);padding:4px 14px;border-radius:16px;font-size:13px;font-weight:600}
+.ph-p1{background:linear-gradient(135deg,#4f46e5,#6366f1)}
+.ph-p2{background:linear-gradient(135deg,#0891b2,#06b6d4)}
+.ph-p3{background:linear-gradient(135deg,#059669,#10b981)}
+.ph-p4{background:linear-gradient(135deg,#dc2626,#f97316)}
+.ph-p5{background:linear-gradient(135deg,#7c3aed,#a855f7)}
+.ph-open{background:linear-gradient(135deg,#1e1b4b,#312e81)}
+.seg{background:#fff;border-radius:14px;box-shadow:0 1px 4px rgba(0,0,0,.07);margin-top:18px;overflow:hidden}
+.seg-head{padding:14px 22px;border-bottom:1px solid #f3f4f6;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.seg-head h3{font-size:16px;font-weight:700;flex:1}
+.seg-dur{font-size:12px;font-weight:600;color:#4f46e5;background:#eef2ff;padding:2px 12px;border-radius:12px}
+.seg-body{padding:18px 22px}
+.loc{display:flex;gap:10px;align-items:flex-start;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:10px 14px;margin-bottom:12px;font-size:13px}
+.loc b{color:#166534}
+.screen{display:flex;gap:10px;align-items:flex-start;background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:10px 14px;margin-bottom:14px;font-size:13px}
+.screen b{color:#1e40af}
+.speech{background:#faf5ff;border-left:4px solid #a855f7;border-radius:0 10px 10px 0;padding:16px 20px;font-size:15px;color:#333;line-height:2.1}
+.speech .s-label{font-size:12px;font-weight:700;color:#7c3aed;letter-spacing:1px;display:block;margin-bottom:8px}
+.speech p{margin-bottom:12px}
+.speech p:last-child{margin-bottom:0}
+.speech .pause{color:#9ca3af;font-size:12px}
+.speech strong{color:#4c1d95}
+.speech .keyline{background:linear-gradient(transparent 60%,#ddd6fe 60%);font-weight:700}
+.terms-row{margin-top:14px}
+.terms-row .tr-label{font-size:12px;font-weight:700;color:#d97706;letter-spacing:1px;margin-bottom:8px}
+.mini-term{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:10px 14px;margin-bottom:8px;font-size:13px}
+.mini-term b{color:#92400e}
+.mini-term .mp{color:#7c3aed;font-size:12px;margin-left:6px}
+.mini-term span.md{color:#555;display:block;margin-top:4px;line-height:1.8}
+.tip{background:#fef2f2;border:1px solid #fecaca;border-radius:10px;padding:10px 14px;margin-top:12px;font-size:13px;color:#991b1b}
+.tip b{display:block;margin-bottom:2px}
+.qa-block{background:#fff;border-radius:14px;box-shadow:0 1px 4px rgba(0,0,0,.07);margin-top:18px;overflow:hidden}
+.qa-head{padding:16px 22px;background:linear-gradient(135deg,#0f172a,#1e293b);color:#fff;font-size:17px;font-weight:700}
+.qa-item{padding:16px 22px;border-bottom:1px solid #f3f4f6}
+.qa-item:last-child{border-bottom:none}
+.qa-item .q{font-size:14px;font-weight:700;color:#1e293b;margin-bottom:6px}
+.qa-item .q::before{content:'Q：';color:#dc2626}
+.qa-item .a{font-size:14px;color:#444;line-height:1.9}
+.qa-item .a::before{content:'A：';color:#059669;font-weight:700}
+table.time-table{width:100%;border-collapse:collapse;font-size:14px}
+table.time-table th{background:#f9fafb;padding:10px 16px;text-align:left;font-weight:700;border-bottom:2px solid #e5e7eb}
+table.time-table td{padding:10px 16px;border-bottom:1px solid #f3f4f6}
+table.time-table tr.total td{font-weight:700;background:#eef2ff;color:#4f46e5}
+.footer{text-align:center;padding:28px;color:#9ca3af;font-size:12px}
+@media(max-width:640px){.hero h1{font-size:22px}.speech{font-size:14px}}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+<span class="brand">🎤 演讲对照稿</span>
+<a class="demo-link" href="https://yaozl666.github.io/ai-dev-showcase/" target="_blank">打开演示网页 ↗</a>
+<span class="dur">建议总时长 60 分钟（含 Q&amp;A）· 30 分钟压缩方案见文末</span>
+<div class="top-nav">
+<a href="#glossary">📖 名词速查</a>
+<a href="#open">开场</a>
+<a href="#p1">Phase 1 规划</a>
+<a href="#p2">Phase 2 迭代</a>
+<a href="#p3">Phase 3 成果</a>
+<a href="#p4">Phase 4 问题</a>
+<a href="#p5">Phase 5 沉淀</a>
+<a href="#qa">Q&amp;A</a>
+<a href="#time">时间表</a>
+</div>
+</div>
+
+<div class="hero">
+<h1>产品思维 × AI · 演讲对照稿</h1>
+<p>本稿与线上演示网页逐段对应。演讲时：一边开着演示网页，一边看着这份稿子。<br>每个环节标注了「网页此时显示什么」+「你应该讲什么」+「涉及的技术名词怎么读、什么意思」。</p>
+<div class="howto">
+<div class="howto-item"><b>📍 绿色框 = 网页位置</b>告诉你演示网页要滚动到哪里，演讲前先把页面翻到对应位置</div>
+<div class="howto-item"><b>🖥️ 蓝色框 = 页面显示</b>概括此时屏幕上观众能看到的内容，确认"讲的"和"看的"对得上</div>
+<div class="howto-item"><b>🎤 紫色框 = 演讲内容</b>口语化的讲稿，可以直接念，也可以用自己的话复述大意</div>
+</div>
+</div>
+
+<div class="container">
+
+<details class="glossary" id="glossary" open>
+<summary>📖 技术名词速查表（演讲前通读两遍，紫色为发音提示）</summary>
+<div class="g-body">
+
+<div class="g-group">
+<h4>🧭 核心工具与平台</h4>
+<div class="term"><span class="t-name">CVAT</span><span class="t-pron">读 "C-VAT"：C 单独读，VAT 读"瓦特"</span><span class="t-en">Computer Vision Annotation Tool</span><div class="t-desc">英特尔（Intel）开源的计算机视觉标注工具，全球最主流的开源标注平台之一。本项目就是在它基础上二次开发。可以理解为"标注界的 Photoshop"——功能强大，但原版全英文、面向开发者。</div></div>
+<div class="term"><span class="t-name">AI（这里指 AI 编程助手）</span><span class="t-pron">两个字母分开读 "诶-爱"</span><div class="t-desc">本项目用 AI 编程助手生成全部代码。被问到时回答"以 Claude 为主，配合 Cursor 编辑器"即可。关键观点：用哪个 AI 不重要，怎么喂需求才重要。</div></div>
+<div class="term"><span class="t-name">开源（Open Source）</span><span class="t-pron">"欧喷-搜斯"</span><div class="t-desc">代码公开、免费使用、全球开发者共同维护的软件。选开源 = 站在巨人肩膀上，不用从零造轮子。</div></div>
+<div class="term"><span class="t-name">GitHub / Star</span><span class="t-pron">"给特-哈布" / "斯大"</span><div class="t-desc">全球最大的代码托管平台，相当于"程序员的微博"。Star 是点赞数，CVAT 有 12000+ star，说明社区认可、质量有保障。</div></div>
+<div class="term"><span class="t-name">SaaS</span><span class="t-pron">读作 "萨斯"（一个词，不拆开读）</span><span class="t-en">Software as a Service</span><div class="t-desc">软件即服务：别人把软件部署好，你打开浏览器就能用（如在线文档）。缺点：数据存在别人服务器上——这是我们不选商业标注 SaaS 的原因（数据涉密）。</div></div>
+<div class="term"><span class="t-name">私有化部署</span><div class="t-desc">把软件安装在自己公司的内网服务器上，数据不出门。和 SaaS 相对。</div></div>
+</div>
+
+<div class="g-group">
+<h4>🖥️ 前端相关（观众看到的界面）</h4>
+<div class="term"><span class="t-name">DOM</span><span class="t-pron">读 "道姆"（一个词）</span><span class="t-en">Document Object Model</span><div class="t-desc">浏览器把网页解析成一棵"元素树"，每个按钮、每段文字都是树上的一个节点。改 DOM = 改页面上显示的内容。汉化脚本就是靠改 DOM 把英文换成中文的。</div></div>
+<div class="term"><span class="t-name">MutationObserver</span><span class="t-pron">"缪特申 · 奥布泽沃"（重音在"泽"）</span><div class="t-desc">浏览器自带的"监视器"：页面上任何元素变化（新增、修改），它都能第一时间收到通知。汉化脚本靠它实时翻译新弹出的内容。口头说"一个能监听页面变化的浏览器原生工具"即可。</div></div>
+<div class="term"><span class="t-name">Canvas</span><span class="t-pron">"坎瓦斯"</span><div class="t-desc">浏览器里的一块"画布"，标注工具用它来画框、画多边形。性能好，能同时渲染上万个标注框不卡顿。</div></div>
+<div class="term"><span class="t-name">React / Ant Design（antd）</span><span class="t-pron">"瑞爱科特" / "安特 · 迪赞"，简称 antd 读 "安特-D"</span><div class="t-desc">React 是界面开发框架；Ant Design 是蚂蚁金服开源的现成界面组件库（表格、按钮、弹窗都是现成的）。坑 1 里崩溃的就是 antd 的表格组件。</div></div>
+<div class="term"><span class="t-name">SPA</span><span class="t-pron">三个字母分开读 "S-P-A"（不是水疗那个 spa）</span><span class="t-en">Single Page Application</span><div class="t-desc">单页应用：整个网站只有一个页面，切换功能不刷新浏览器。CVAT 就是 SPA。坑 9 里独立管理页面被 SPA "拦截"，就是因为这个机制。</div></div>
+<div class="term"><span class="t-name">GIF</span><span class="t-pron">读 "吉夫" 或 "杰夫" 都可以（两种读音都存在）</span><div class="t-desc">一种会动的图片格式。本项目用它录屏演示操作过程，是最直观的"需求文档"。</div></div>
+<div class="term"><span class="t-name">组件（Component）</span><span class="t-pron">"康泡嫩特"</span><div class="t-desc">前端的一个独立功能块：一个按钮、一个弹窗、一个表格，都是一个组件。"新增 12 个组件" = 新增 12 个功能块。</div></div>
+</div>
+
+<div class="g-group">
+<h4>⚙️ 后端与部署（看不见的部分）</h4>
+<div class="term"><span class="t-name">API</span><span class="t-pron">三个字母分开读 "诶-皮-爱"</span><span class="t-en">Application Programming Interface</span><div class="t-desc">前端和后端之间"对话"的窗口。比如点"提交"按钮，前端就通过 API 告诉后端"这一帧标完了"。43 条 API 路由 = 43 个这样的对话窗口。</div></div>
+<div class="term"><span class="t-name">路由（Route）</span><span class="t-pron">"如特"</span><div class="t-desc">API 的"地址"。比如 /api/users 是用户接口、/api/frames 是帧接口。可以理解成"门牌号"。</div></div>
+<div class="term"><span class="t-name">Docker</span><span class="t-pron">"道客"（像 doctor 去掉 or）</span><div class="t-desc">把软件和它的全部依赖打包成一个"集装箱"，搬到哪台机器上都能跑，是业界主流部署方式。但我们在坑 2 里放弃了它——因为和共享存储不兼容，改用更朴素的方案。<b>这是"官方推荐 ≠ 最适合你"的典型案例。</b></div></div>
+<div class="term"><span class="t-name">virtualenv</span><span class="t-pron">"沃球-恩夫"（virtual + env 缩写）</span><div class="t-desc">Python 的虚拟环境，最朴素的隔离方式。没有 Docker 花哨，但在我们的环境下更稳定。</div></div>
+<div class="term"><span class="t-name">Nginx</span><span class="t-pron">读 "引擎-X"（Engine-X），不读 "恩金克斯"</span><div class="t-desc">一个"前台接待员"：所有访问请求先到它这里，它再转发给后面具体的服务。还负责注入汉化脚本、处理超时配置。</div></div>
+<div class="term"><span class="t-name">端口（Port）</span><span class="t-pron">"泡特"</span><div class="t-desc">一台服务器上不同服务的"门牌号"。一台机器可以同时跑很多服务，靠端口号区分。坑 6 里 OPA 和 Nginx 抢了同一个端口 8181，就像两个人住进同一个房间，必出冲突。</div></div>
+<div class="term"><span class="t-name">Django</span><span class="t-pron">"姜戈"（D 不发音！）</span><div class="t-desc">Python 最主流的 Web 后端框架，CVAT 的后端就是用它写的。</div></div>
+<div class="term"><span class="t-name">OPA</span><span class="t-pron">三个字母分开读 "O-P-A"</span><span class="t-en">Open Policy Agent</span><div class="t-desc">一个专门做权限判断的引擎。CVAT 用它决定"这个人能不能干这件事"。坑 10 的决策：OPA 管全局权限，帧级权限交给应用层——分层管理。</div></div>
+<div class="term"><span class="t-name">RBAC</span><span class="t-pron">读 "R-BAC"："阿尔-巴克"</span><span class="t-en">Role-Based Access Control</span><div class="t-desc">基于角色的访问控制：先定义角色（管理员/标注员/审核员），把权限绑在角色上，人只需要被分配角色。比"给每个人单独配权限"好维护得多。</div></div>
+<div class="term"><span class="t-name">OSS / ossfs</span><span class="t-pron">"O-S-S" 三个字母 / "奥斯-FS"</span><span class="t-en">Object Storage Service</span><div class="t-desc">云对象存储，可以理解为"云端的大硬盘"，图片和视频都存在这里。ossfs 是把云硬盘"挂载"到服务器上的工具，让云存储看起来像本地文件夹。坑 5 的上传超时就是它读写慢导致的。</div></div>
+<div class="term"><span class="t-name">CSRF / CORS</span><span class="t-pron">"C-S-R-F" 四个字母 / "科尔斯"</span><div class="t-desc">两个网络安全机制。CSRF 防"假冒请求"，CORS 管"跨域名访问"。坑 7 里换了域名访问后所有请求被 CSRF 拒绝，加一行信任配置就解决了。被问时说"两个浏览器安全机制，换域名后需要重新配置信任名单"即可。</div></div>
+<div class="term"><span class="t-name">数据库迁移（Migration）</span><span class="t-pron">"米格瑞申"</span><div class="t-desc">在数据库里"建表"的操作。问题"分配标注员报错"的原因就是：代码更新了但表没建——迁移没执行。就像装修图纸画好了但墙没砌。</div></div>
+</div>
+
+<div class="g-group">
+<h4>🔢 HTTP 状态码（报错数字）</h4>
+<div class="term"><span class="t-name">403</span><div class="t-desc">"服务器理解你的请求，但拒绝执行"——通俗说就是<b>"没权限，拒绝"</b>。权限验收标准里"后端返回 403"就是指这个。</div></div>
+<div class="term"><span class="t-name">500</span><div class="t-desc">"服务器内部错误"——后端代码自己崩了。问题"分配标注员报错"就是 500。</div></div>
+<div class="term"><span class="t-name">504</span><div class="t-desc">"网关超时"——请求发出去了，但等太久没回应。坑 5 上传大文件超时就是 504。</div></div>
+</div>
+
+<div class="g-group">
+<h4>📦 数据格式与标注专业词</h4>
+<div class="term"><span class="t-name">标注框 / 帧</span><span class="t-pron">帧 = Frame，读 "弗雷姆"</span><div class="t-desc">标注框：在图片上画框标出物体（车、建筑、道路），是 AI 训练数据的原材料。帧：视频里的一帧 = 一张图片。"帧级管理" = 精确到每一张图的管理粒度。日产 10 万框 = 每天画 10 万个框。</div></div>
+<div class="term"><span class="t-name">多边形（Polygon）</span><span class="t-pron">"波利根"</span><div class="t-desc">由多个点连成的不规则形状，比矩形框更贴合物体轮廓。共边和切割都是多边形操作。</div></div>
+<div class="term"><span class="t-name">共边 / 切割</span><div class="t-desc">共边：两个标注框共享一条边，中间无缝隙。切割：新框和旧框重叠时，自动把重叠部分从旧框上"切掉"。这是标注员的核心诉求，也是迭代 5 轮的功能。</div></div>
+<div class="term"><span class="t-name">语义分割 / 关键点</span><div class="t-desc">语义分割：把图片每个像素都标上类别（比画框更精细）。关键点：标出物体的关键位置（如人的关节）。都是标注方式的种类。</div></div>
+<div class="term"><span class="t-name">COCO / VOC / YOLO</span><span class="t-pron">"可可" / "V-O-C" 三个字母 / "优漏"</span><div class="t-desc">三种主流的标注数据导出格式，对应不同的 AI 训练框架。被问时说"三种行业标准的标注数据格式，我们的平台都支持一键导出"即可。</div></div>
+<div class="term"><span class="t-name">状态机（State Machine）</span><div class="t-desc">一个对象只能处于有限几种状态，按规则在状态间跳转。帧的状态：待领取 → 标注中 → 待审核 → 完成/驳回。用户看到的"流程"，本质就是状态机。AI 不会主动设计它，必须产品思维想到。</div></div>
+<div class="term"><span class="t-name">浮点精度 / epsilon</span><span class="t-pron">epsilon 读 "艾普西龙"</span><div class="t-desc">计算机算小数时有微小误差（如 0.1+0.2≠0.3）。切割算法里两条边"几乎平行"时误差被放大，导致框体变形。epsilon 是人为设定的"容差"——小于这个误差就当作相等。坑 8 讲的就是这个。</div></div>
+<div class="term"><span class="t-name">上下文（Context）</span><div class="t-desc">AI 一次对话能"记住"的信息量上限。需求太复杂超出上下文，AI 就会顾此失彼。这是"小步快跑、一次一个功能点"的原因。</div></div>
+</div>
+
+</div>
+</details>
+
+<!-- ==================== 开场 ==================== -->
+<div class="phase-block" id="open">
+<div class="phase-header ph-open"><span class="ph-icon">🎬</span><h2>开场：四个数字</h2><span class="ph-dur">⏱️ 3 分钟</span></div>
+
+<div class="seg">
+<div class="seg-head"><h3>用数字抓住注意力，抛出核心观点</h3><span class="seg-dur">3 min</span></div>
+<div class="seg-body">
+<div class="loc"><div><b>📍 网页位置：</b>页面最顶部紫色大标题区域（Header），不用滚动。</div></div>
+<div class="screen"><div><b>🖥️ 页面显示：</b>标题"产品思维 × AI"、副标题、四个大数字——0 行手写代码 / 1 个月 / 20 人在线生产 / 10 万+ 标注框每日。</div></div>
+<div class="speech"><span class="s-label">🎤 演讲内容</span>
+<p>大家好。开始之前，先给大家看四个数字：<strong>0、1、20、10 万</strong>。</p>
+<p>0——这个项目，我一行代码都没有手写。<br>1——从开始摸索到平台上线，1 个月。<br>20——现在每天支撑 20 个人在线生产。<br>10 万——每天产出 10 万+ 个标注框。</p>
+<p><span class="pause">（停顿 2 秒，环视观众）</span></p>
+<p>我不是开发，我是做产品的。所以今天想分享的，不是"AI 有多厉害"——AI 厉害大家都知道——而是：<span class="keyline">一个不会写代码的人，怎么用产品思维把 AI 管好，让它真的交付一个能上生产的东西。</span></p>
+<p>核心观点一句话：<strong>AI 是执行力极强的工具，但方向必须由产品思维来定。</strong>接下来我按项目真实的 5 个阶段来讲。</p>
+</div>
+<div class="terms-row"><div class="tr-label">📖 本段技术名词</div>
+<div class="mini-term"><b>标注框</b><span class="md">在图片/视频上画框标出物体（车、人、建筑），是 AI 训练数据的原材料。"日产 10 万框" = 每天画 10 万个框。</span></div>
+<div class="mini-term"><b>帧</b><span class="mp">Frame，读"弗雷姆"</span><span class="md">视频里的一帧 = 一张图片。"帧级"就是精确到每一张图的管理粒度。</span></div>
+</div>
+<div class="tip"><b>💡 讲法提示</b>四个数字逐个报，每个数字后停半拍。"0 行手写代码"是全场最大的钩子，务必留足反应时间。</div>
+</div>
+</div>
+</div>
+
+<!-- ==================== PHASE 1 ==================== -->
+<div class="phase-block" id="p1">
+<div class="phase-header ph-p1"><span class="ph-icon">📐</span><h2>Phase 1：产品规划 — 先想清楚再动手</h2><span class="ph-dur">⏱️ 15 分钟</span></div>
+
+<div class="seg">
+<div class="seg-head"><h3>1-A 业务目标：用业务语言定义问题</h3><span class="seg-dur">3 min</span></div>
+<div class="seg-body">
+<div class="loc"><div><b>📍 网页位置：</b>Phase 1 区域 → 五步流程图下方，左侧"🎯 业务目标定义"卡片。</div></div>
+<div class="screen"><div><b>🖥️ 页面显示：</b>顶部 5 步流程图（明确业务目标→定义用户角色→设计功能架构→选择技术底座→制定验收标准）；左侧卡片列出 4 个痛点 + 核心诉求提炼框。</div></div>
+<div class="speech"><span class="s-label">🎤 演讲内容</span>
+<p>第一步，先想清楚再动手。大家看顶部这五步，是整个规划阶段的骨架。</p>
+<p>当时的现状是什么？单机版标注工具，<strong>10 个标注员排队等 1 台机器</strong>；标完就交，没有审核，错误率 15%；进度全靠问，管理者完全黑盒；数据散落在各台电脑上，汇总靠 U 盘拷贝。</p>
+<p>这四个痛点，我把它提炼成一句话——<span class="keyline">我需要一个支持多人协作、有审核流程、可追踪进度、数据自动闭环的在线标注平台。</span></p>
+<p>注意，这句话里没有任何技术词汇。这就是产品思维的第一步：<strong>用业务语言定义问题，而不是用技术语言。</strong>因为后面你要把这段话喂给 AI——AI 听得懂"多人协作"，你不需要告诉它用什么框架。</p>
+</div>
+<div class="tip"><b>💡 讲法提示</b>4 个痛点快速带过（观众能自己读），重点讲"核心诉求提炼"那句话——它是全场的"需求原点"。</div>
+</div>
+</div>
+
+<div class="seg">
+<div class="seg-head"><h3>1-B 角色权限：先定义"谁能做什么"</h3><span class="seg-dur">3 min</span></div>
+<div class="seg-body">
+<div class="loc"><div><b>📍 网页位置：</b>Phase 1 区域 → 右侧"👥 用户角色与权限设计"卡片（权限表格）。</div></div>
+<div class="screen"><div><b>🖥️ 页面显示：</b>一张权限矩阵表：操作 × 4 种角色（管理员/标注员/审核员/观察者）的 ✓/✗；下方高亮框"权限粒度到项目级"。</div></div>
+<div class="speech"><span class="s-label">🎤 演讲内容</span>
+<p>定义完问题，下一步是定义人：<strong>谁用？怎么用？权限怎么分？</strong></p>
+<p>大家看这张表。我定义了四种角色：管理员、标注员、审核员、观察者。这张表的价值不在于它本身，而在于——<span class="keyline">它是后面所有功能设计的"宪法"。</span>AI 每实现一个功能，我拿这张表去对：标注员能看到这个按钮吗？审核员能做这个操作吗？对不上，就是 bug。</p>
+<p>这里有一个关键决策，大家看下面高亮框：<strong>权限粒度到"项目级"，而不是"全局级"。</strong>同一个人，可以在 A 项目是标注员，在 B 项目是审核员。这个决策是我提的，AI 不会主动想到——因为全局权限实现起来简单得多。但业务上，人是跨项目流动的，这就是产品判断。</p>
+</div>
+<div class="terms-row"><div class="tr-label">📖 本段技术名词</div>
+<div class="mini-term"><b>RBAC</b><span class="mp">读 "R-BAC"："阿尔-巴克"</span><span class="md">Role-Based Access Control，基于角色的访问控制。先定义角色，把权限绑在角色上，人只需要被分配角色。比"给每个人单独配权限"好维护得多。</span></div>
+</div>
+</div>
+</div>
+
+<div class="seg">
+<div class="seg-head"><h3>1-C 功能架构：把大系统拆成 AI 能消化的小模块</h3><span class="seg-dur">4 min</span></div>
+<div class="seg-body">
+<div class="loc"><div><b>📍 网页位置：</b>Phase 1 区域 → "🏗️ 功能架构设计"（五层架构图 + 模块拆解卡片）。</div></div>
+<div class="screen"><div><b>🖥️ 页面显示：</b>五层架构图（用户层/业务层/工具层/数据层/基础设施层），每层列出具体模块；下方卡片"模块拆解思路：为什么这样分"4 条。</div></div>
+<div class="speech"><span class="s-label">🎤 演讲内容</span>
+<p>接下来是规划阶段最核心的动作：<strong>把一个大系统拆成可独立交付的小模块。</strong></p>
+<p>大家看这张五层架构图。从上到下：用户层是登录、通知、中文界面；业务层是项目管理、任务分配、标注、审核这些核心流程；工具层是各种标注能力；数据层管存储和导入导出；基础设施层管部署。</p>
+<p>为什么要拆？下面卡片里写了四条理由，我重点讲最后一条——<span class="keyline">按 AI 对话粒度拆。</span>一次对话只解决一个模块的一个功能点。为什么？因为 AI 有"上下文"限制，你一次给它的需求太大，它会顾此失彼、丢三落四。100 个小对话，远好于 1 个大对话。</p>
+<p>所以这张架构图，本质上是<strong>给 AI 的"任务分解表"</strong>。产品思维在这里的作用，就是把"做一个标注平台"这个模糊的大目标，翻译成几十个清晰的小任务。</p>
+</div>
+<div class="terms-row"><div class="tr-label">📖 本段技术名词</div>
+<div class="mini-term"><b>上下文（Context）</b><span class="md">AI 一次对话能"记住"的信息量上限。需求太复杂超出上下文，AI 就会顾此失彼。这是"一次一个功能点"的原因。</span></div>
+<div class="mini-term"><b>模块（Module）</b><span class="md">系统里可独立开发、独立验收的功能块。拆模块 = 把大象切成一口一口能吃下的肉。</span></div>
+</div>
+</div>
+</div>
+
+<div class="seg">
+<div class="seg-head"><h3>1-D 技术选型：为什么选 CVAT（全场最重要的决策之一）</h3><span class="seg-dur">3 min</span></div>
+<div class="seg-body">
+<div class="loc"><div><b>📍 网页位置：</b>Phase 1 区域 → "🔑 技术选型决策：为什么选 CVAT？"（4 个方案对比列表）。</div></div>
+<div class="screen"><div><b>🖥️ 页面显示：</b>四个方案：A 完全自研 ✗ / B 轻量工具 ✗ / C 商业 SaaS ✗ / D CVAT 开源二次开发 ✓；下方高亮框"选型原则"。</div></div>
+<div class="speech"><span class="s-label">🎤 演讲内容</span>
+<p>有了架构，下一个大决策：技术底座怎么选？我对比了四个方案，大家看屏幕。</p>
+<p>方案 A，完全自研——标注工具涉及画布渲染、坐标变换这些复杂交互，自研至少要 3 到 6 个月，排除。方案 B，LabelImg 这类轻量工具——只支持单机单人，不满足协作需求，排除。方案 C，商业 SaaS——功能是好，但数据必须上传到第三方服务器，我们的飞行数据涉密，安全合规一票否决。</p>
+<p>最后选 D：CVAT 开源二次开发。它是英特尔开源的，GitHub 一万两千多个 star，功能覆盖我们 90% 的需求，支持私有化部署。剩下 10% 的缺口，正好是 AI 可以补齐的部分。</p>
+<p>这里我想强调一句选型原则，也是我做产品这些年最深的体会——<span class="keyline">能用成熟方案就不造轮子。选 CVAT 不是因为它完美，而是因为它的"不完美"恰好是 AI 可以补齐的部分。</span></p>
+</div>
+<div class="terms-row"><div class="tr-label">📖 本段技术名词</div>
+<div class="mini-term"><b>CVAT</b><span class="mp">读 "C-VAT"：C 单独读，VAT 读"瓦特"</span><span class="md">Computer Vision Annotation Tool，英特尔开源的标注工具，"标注界的 Photoshop"。本项目在它基础上二次开发。</span></div>
+<div class="mini-term"><b>SaaS</b><span class="mp">读 "萨斯"（一个词）</span><span class="md">Software as a Service，软件即服务，数据存在别人服务器上。我们因数据涉密不选它。</span></div>
+<div class="mini-term"><b>私有化部署</b><span class="md">软件装在自己公司内网服务器上，数据不出门。和 SaaS 相对。</span></div>
+<div class="mini-term"><b>GitHub / Star</b><span class="mp">"给特-哈布" / "斯大"</span><span class="md">全球最大代码托管平台；Star 是点赞数，12000+ star 说明社区认可。</span></div>
+</div>
+</div>
+</div>
+
+<div class="seg">
+<div class="seg-head"><h3>1-E 验收标准：给 AI 出"考试题目"</h3><span class="seg-dur">2 min</span></div>
+<div class="seg-body">
+<div class="loc"><div><b>📍 网页位置：</b>Phase 1 区域最底部 → "✅ 验收标准定义"卡片。</div></div>
+<div class="screen"><div><b>🖥️ 页面显示：</b>6 条验收标准（中文化/权限体系/标注工作台/审核流程/数据导出/部署）；底部一句话"这些验收标准后来成了每次 AI 对话的结尾指令"。</div></div>
+<div class="speech"><span class="s-label">🎤 演讲内容</span>
+<p>规划的最后一步：什么算"做完了"？</p>
+<p>我提前定好了 6 条验收标准，比如：所有可见文字必须是中文；权限要前端隐藏加后端 403 双重校验；1000 个标注框不能卡顿；导出 COCO、VOC、YOLO 格式中文标签不乱码。</p>
+<p>这些标准后来有一个妙用——<span class="keyline">它们成了我每次 AI 对话的"结尾指令"。</span>每次让 AI 做完一个功能，我就补一句"做完后帮我验证以上几点"。验收标准就是给 AI 的考试题目，没有题目，你就没法判断它答得对不对。</p>
+<p>Phase 1 总结一句话：<strong>AI 动手之前，产品思维先回答四个问题——做什么、给谁用、怎么拆、怎么算完成。</strong></p>
+</div>
+<div class="terms-row"><div class="tr-label">📖 本段技术名词</div>
+<div class="mini-term"><b>403</b><span class="md">HTTP 状态码，"没权限，拒绝"。"前端隐藏 + 后端 403 双重校验" = 界面上看不到按钮，就算绕过界面直接调接口也会被服务器拒绝。两道锁，缺一不可。</span></div>
+<div class="mini-term"><b>COCO / VOC / YOLO</b><span class="mp">"可可" / "V-O-C" / "优漏"</span><span class="md">三种行业标准的标注数据导出格式，对应不同的 AI 训练框架。</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ==================== PHASE 2 ==================== -->
+<div class="phase-block" id="p2">
+<div class="phase-header ph-p2"><span class="ph-icon">🔍</span><h2>Phase 2：迭代方法论 — 判断"对不对"与"好不好"</h2><span class="ph-dur">⏱️ 15 分钟</span></div>
+
+<div class="seg">
+<div class="seg-head"><h3>2-A 三步节奏：产品思维驱动 AI 的核心循环</h3><span class="seg-dur">3 min</span></div>
+<div class="seg-body">
+<div class="loc"><div><b>📍 网页位置：</b>Phase 2 区域顶部 → "🔄 产品思维驱动 AI 的三步节奏"卡片 + 下方轮次图例。</div></div>
+<div class="screen"><div><b>🖥️ 页面显示：</b>三张卡片：Step 1 描述需求 / Step 2 判断对不对 / Step 3 判断好不好；下方一行图例：🔵提出需求 → 🟡判断分析 → 🟢验收通过。</div></div>
+<div class="speech"><span class="s-label">🎤 演讲内容</span>
+<p>规划做完了，AI 开始写代码了。这时候产品思维最重要的工作是什么？<strong>不是看懂代码，而是判断结果。</strong></p>
+<p>我把它总结成三步节奏，大家看屏幕。第一步，描述需求——用产品语言说清楚"要什么、不要什么、验收标准是什么"。注意，不说"帮我写个函数"，而说"我需要一个项目级权限系统，标注员只能看到自己的作业"。</p>
+<p>第二步，判断"对不对"——AI 做完后，我实际操作、截图录屏，看功能是不是按预期工作。我不需要看懂代码，只需要看结果。</p>
+<p>第三步，判断"好不好"——功能对了还不够，操作流不流畅？提示清不清晰？<span class="keyline">"对不对"是及格线，"好不好"才是产品价值。而"好不好"这个判断，AI 做不了，只有产品思维能做。</span></p>
+<p>下面图例里，🔵蓝色代表提出需求、🟡黄色代表判断分析、🟢绿色代表验收通过。接下来两个真实案例，大家会看到这三种颜色反复出现。</p>
+</div>
+</div>
+</div>
+
+<div class="seg">
+<div class="seg-head"><h3>2-B 案例 1：共边与切割 — 从"能用"到"好用"的 5 轮迭代（重点案例）</h3><span class="seg-dur">8 min</span></div>
+<div class="seg-body">
+<div class="loc"><div><b>📍 网页位置：</b>Phase 2 区域 → "📌 案例 1：多边形共边与切割"大卡片，逐轮滚动展示（第 1 轮到第 5 轮）。</div></div>
+<div class="screen"><div><b>🖥️ 页面显示：</b>一个带蓝色顶边的大案例卡片，内含 5 个轮次块：🔵第1轮需求描述+示意图 / 🟡第2轮共边显示问题 / 🟢第3轮交互体验优化 / 🔵第4轮切割逻辑修正+期望效果图 / 🟢第5轮最终验收（817 行组件）。</div></div>
+<div class="speech"><span class="s-label">🎤 演讲内容</span>
+<p>这是整个项目迭代次数最多的功能，5 轮。先解释一下背景：标注员要标紧密相邻的物体，比如道路贴着建筑。要求两个框之间没有缝隙，这叫"共边"；新框压在旧框上时，要自动把重叠部分从旧框上切掉，这叫"切割"。</p>
+<p><strong>第 1 轮（蓝）</strong>，我给 AI 的需求描述大家看原文："两个框共边不留缝隙，但仍是两个独立的框；切割时把重合部分切给新框，自动共边"。AI 很快给出了第一版——能跑。</p>
+<p><strong>第 2 轮（黄）</strong>，我实际操作后发现问题：共边之后只显示一条边的颜色，而且共边完一个，系统自动跳出让选下一对，用户完全没有自主权，想再跟第三个框共边就做不到了。注意我的判断——<span class="keyline">功能逻辑"对了"，但交互"不对"，因为用户失去了控制权。</span></p>
+<p><strong>第 3 轮（绿）</strong>，这次是"好不好"的问题：弹窗提示太多，界面很乱。我给 AI 的反馈是：不要弹窗、共边不分先后顺序、切割默认第一个切第二个、选框时显示①②序号。这些是纯产品体验问题，AI 永远不会主动想到。</p>
+<p><strong>第 4 轮（蓝）</strong>，切割逻辑出问题了：大框和两个框重叠时，切出来的形状会收缩变形，另一个重叠框还没被切。这时候我做了一个关键动作——<span class="keyline">我直接画了一张期望效果图给 AI，告诉它"我要的是这个"。</span>大家看屏幕上那张手绘示意图。有时候，一张图胜过一千字。</p>
+<p><strong>第 5 轮（绿）</strong>，验收通过。最终这个功能产出了 817 行代码的专用组件。817 行，没有一行是我写的，但每一行往哪个方向走，都是产品判断决定的。</p>
+<p>这个案例的结论：<strong>AI 第一版就能"跑"，但只有产品思维能判断"跑得对不对、好不好"，并精确描述差距在哪里。</strong></p>
+</div>
+<div class="terms-row"><div class="tr-label">📖 本段技术名词</div>
+<div class="mini-term"><b>共边 / 切割</b><span class="md">共边：两个标注框共享一条边，中间无缝隙。切割：新框和旧框重叠时，自动把重叠部分从旧框上"切掉"。</span></div>
+<div class="mini-term"><b>多边形（Polygon）</b><span class="mp">"波利根"</span><span class="md">由多个点连成的不规则形状，比矩形框更贴合物体轮廓。共边和切割都是多边形操作。</span></div>
+<div class="mini-term"><b>组件（Component）</b><span class="mp">"康泡嫩特"</span><span class="md">前端的一个独立功能块。"817 行的组件" = 一个 817 行代码的独立功能文件。</span></div>
+</div>
+<div class="tip"><b>💡 讲法提示</b>这是全场最该讲透的案例，5 轮逐轮讲，每轮指着屏幕上对应颜色的轮次块。第 4 轮的"手绘期望图"是高光时刻，多停两秒。</div>
+</div>
+</div>
+
+<div class="seg">
+<div class="seg-head"><h3>2-C 案例 2：帧级工作流 — 判断"流程对不对"</h3><span class="seg-dur">3 min</span></div>
+<div class="seg-body">
+<div class="loc"><div><b>📍 网页位置：</b>Phase 2 区域 → "📌 案例 2：帧级工作流"绿色顶边卡片。</div></div>
+<div class="screen"><div><b>🖥️ 页面显示：</b>三个轮次块：🔵提交后状态没变（截图）/ 🟡审核按钮无反应（截图）/ 🟢最终完整工作流（帧列表+详情截图）。</div></div>
+<div class="speech"><span class="s-label">🎤 演讲内容</span>
+<p>第二个案例讲"流程"。平台的核心流程是：领取帧 → 标注 → 提交 → 审核 → 通过或驳回。</p>
+<p>AI 实现之后，我发现一个典型问题：标注员点"提交"之后，这一帧的状态还是"待领取"，正确应该变成"待验收"。大家看这张截图。这就是<span class="keyline">"功能做了，但流程不对"——AI 实现了提交按钮，但没有联动背后的状态流转。</span></p>
+<p>这里要引入一个概念叫"状态机"：一帧只能处于几种固定状态，按规则跳转。用户看到的"流程"，本质就是状态机。这个东西 AI 不会主动设计，必须产品思维先想清楚"状态有哪几种、什么条件下跳转、谁能触发跳转"，再告诉 AI。</p>
+<p>经过多轮修复，最终实现了完整的帧级状态流转。这个案例的结论：<strong>单个功能对了，不等于流程对了。产品思维要看的是"串起来的流程"，不是"孤立的功能"。</strong></p>
+</div>
+<div class="terms-row"><div class="tr-label">📖 本段技术名词</div>
+<div class="mini-term"><b>状态机（State Machine）</b><span class="md">一个对象只能处于有限几种状态，按规则在状态间跳转。帧的状态：待领取→标注中→待审核→完成/驳回。用户看到的"流程"本质就是状态机。</span></div>
+</div>
+</div>
+</div>
+
+<div class="seg">
+<div class="seg-head"><h3>2-D 收口：给 AI 反馈的"三要素公式"</h3><span class="seg-dur">1 min</span></div>
+<div class="seg-body">
+<div class="loc"><div><b>📍 网页位置：</b>Phase 2 区域最底部 → 紫色高亮总结框 + "🧪 系统性测试"引导卡片。</div></div>
+<div class="screen"><div><b>🖥️ 页面显示：</b>高亮框三条总结（对不对/好不好/给AI的信息三要素）；上方卡片引导"23 个问题的完整记录见 Phase 4"。</div></div>
+<div class="speech"><span class="s-label">🎤 演讲内容</span>
+<p>Phase 2 收口，给大家一个可以直接抄走的公式。给 AI 反馈问题，三要素缺一不可：<strong>我做了什么 + 我看到了什么 + 我期望看到什么</strong>，再配上一张截图或 GIF。</p>
+<p>就像看医生——你不需要自己诊断是什么病，只需要说清楚"哪里疼、怎么个疼法、什么时候开始的"。截图和 GIF，就是最好的"需求文档"。</p>
+<p>除了这两个深度案例，我还逐一实操测试，发现了 23 个具体问题，全部记录在案。完整的"问题库"我们 Phase 4 再看。</p>
+</div>
+<div class="terms-row"><div class="tr-label">📖 本段技术名词</div>
+<div class="mini-term"><b>GIF</b><span class="mp">读"吉夫"或"杰夫"均可</span><span class="md">会动的图片格式。本项目用它录屏演示操作过程，比文字描述直观一百倍。</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ==================== PHASE 3 ==================== -->
+<div class="phase-block" id="p3">
+<div class="phase-header ph-p3"><span class="ph-icon">📦</span><h2>Phase 3：交付成果 — 从痛点到生产力</h2><span class="ph-dur">⏱️ 10 分钟</span></div>
+
+<div class="seg">
+<div class="seg-head"><h3>3-A 前后对比：先给结果，回扣开头痛点（最有说服力的一页）</h3><span class="seg-dur">3 min</span></div>
+<div class="seg-body">
+<div class="loc"><div><b>📍 网页位置：</b>Phase 3 区域顶部 → 绿色顶边"📊 前后对比"大表格。</div></div>
+<div class="screen"><div><b>🖥️ 页面显示：</b>三列对比表：😩之前（单机时代）→ 🛠️平台方案 → ✅现在。5 行，末行"日产 10 万+ 标注框"。</div></div>
+<div class="speech"><span class="s-label">🎤 演讲内容</span>
+<p>讲完方法，先看结果。开场我说过四个痛点，现在我们逐条对账。</p>
+<p>排队等机器？现在 <strong>20 个人同时在线生产</strong>。标完就交、质量靠自觉？现在有帧级工作流，标注→提交→审核→通过或驳回，<strong>全链路质量可追踪</strong>。进度黑盒？现在帧级状态加每日统计面板，<strong>进度实时透明</strong>。数据靠 U 盘拷贝？现在云存储加一键导出，<strong>数据自动闭环</strong>。</p>
+<p>最后一行是产量：<span class="keyline">日产 10 万+ 标注框。</span>这不是演示数据，是现在每天真实跑出来的生产数据。</p>
+<p>大家注意这张表的结构——"痛点→方案→结果"。这是产品经理汇报的基本功：<strong>每一个功能，都要能回答"它解决了开头痛点里的哪一条"。</strong>回答不了的功能，就不该做。</p>
+</div>
+<div class="tip"><b>💡 讲法提示</b>这一段要和开场形成"首尾呼应"，观众会有"原来开头埋了伏笔"的感觉。逐行讲，每行重读绿色结果列。</div>
+</div>
+</div>
+
+<div class="seg">
+<div class="seg-head"><h3>3-B 六大功能模块：快速过一遍"交付了什么"</h3><span class="seg-dur">3 min</span></div>
+<div class="seg-body">
+<div class="loc"><div><b>📍 网页位置：</b>Phase 3 区域 → 六张功能卡片（标注工作台/共边切割/权限组织/帧级工作流/数据导入导出/全中文界面）。</div></div>
+<div class="screen"><div><b>🖥️ 页面显示：</b>3×2 网格的六张功能卡片，每张有图标、名称、描述、标签。</div></div>
+<div class="speech"><span class="s-label">🎤 演讲内容</span>
+<p>平台一共六大模块，大家看屏幕，我快速过一下。</p>
+<p>标注工作台——矩形框、多边形、语义分割、关键点、视频帧都支持，上万个框不卡顿。共边与切割——就是 Phase 2 那个 5 轮迭代的功能。权限与组织——四种角色、项目级权限。帧级工作流——领取、提交、审核、驳回的完整流程。数据导入导出——COCO、VOC、YOLO 格式一键导出，中文不乱码。</p>
+<p>最后一个我要单独说一句：<strong>全中文界面</strong>。CVAT 原版是全英文的，标注员很多看不懂。我们没有改它的源码，而是做了一个"运行时翻译"——页面加载时实时把英文替换成中文。为什么不改源码？因为<span class="keyline">改了源码，以后官方升级就合并不上了。运行时翻译，升级零冲突。</span>这个"不改源码"的决策，是典型的产品思维：不只看现在，还要看一年后。</p>
+</div>
+<div class="terms-row"><div class="tr-label">📖 本段技术名词</div>
+<div class="mini-term"><b>Canvas</b><span class="mp">"坎瓦斯"</span><span class="md">浏览器里的"画布"，标注工具用它画框。性能好，上万框不卡顿。</span></div>
+<div class="mini-term"><b>语义分割 / 关键点</b><span class="md">语义分割：把图片每个像素标上类别（比画框精细）。关键点：标物体的关键位置（如关节）。都是标注方式。</span></div>
+<div class="mini-term"><b>运行时翻译</b><span class="md">不改软件源码，在页面加载时实时替换文字。好处：官方升级不冲突。代价：需要处理"先闪一下英文"的问题（坑 3 会讲）。</span></div>
+</div>
+</div>
+</div>
+
+<div class="seg">
+<div class="seg-head"><h3>3-C 开发全景：7 个阶段 + 关键数字（证明"0 行手写"不是空话）</h3><span class="seg-dur">3 min</span></div>
+<div class="seg-body">
+<div class="loc"><div><b>📍 网页位置：</b>Phase 3 区域 → "🗂️ 开发全景"：四个统计数字 + 7 阶段表格。</div></div>
+<div class="screen"><div><b>🖥️ 页面显示：</b>四个数字（7 开发阶段 / 4695+ 新增代码行 / 43 新增 API 路由 / 1784 汉化词条行）+ 7 阶段表格（调研选型→源码部署→前端汉化→后端扩展→前端定制→自建平台→部署测试）。</div></div>
+<div class="speech"><span class="s-label">🎤 演讲内容</span>
+<p>有人会问：0 行手写代码，那这 1 个月你到底在干嘛？答案就在这张表里。</p>
+<p>整个平台拆成了 7 个开发阶段：调研选型、环境搭建、前端汉化、后端扩展、前端定制、自建管理平台、部署测试。每个阶段有明确的产出和验收标准。看这几个数字：4695 行新增代码、43 个接口、1784 行汉化词条——<span class="keyline">这些代码全是 AI 写的，但"写什么、为什么写、写完怎么验"，全是产品判断。</span></p>
+<p>这里有个细节值得说：第 6 个阶段"CVAT-DO 自建平台"。为什么二开了还要自建？因为 CVAT 的管理功能太弱，企业要的是审核、监管、数据看板这些，它没有。所以<span class="keyline">标注引擎用开源的，管理系统自建——该借力的借力，该自建的自建，这也是选型判断。</span></p>
+</div>
+<div class="terms-row"><div class="tr-label">📖 本段技术名词</div>
+<div class="mini-term"><b>API 路由</b><span class="mp">API 读 "诶-皮-爱"；路由读 "如特"</span><span class="md">前端和后端"对话"的窗口及其地址。43 条路由 = 43 个对话窗口。</span></div>
+<div class="mini-term"><b>汉化词条</b><span class="md">一条"英文→中文"的翻译记录。1784 行 = 1784 条翻译规则。</span></div>
+</div>
+</div>
+</div>
+
+<div class="seg">
+<div class="seg-head"><h3>3-D 产品视角的功能全景图（可选讲，时间紧可跳过）</h3><span class="seg-dur">1 min</span></div>
+<div class="seg-body">
+<div class="loc"><div><b>📍 网页位置：</b>Phase 3 区域 → "🗺️ 系统功能全景图"流程图。</div></div>
+<div class="screen"><div><b>🖥️ 页面显示：</b>从上到下的流程图：用户入口→项目管理/人员管理→任务分配→标注工作台/提交审核→审核验收→数据统计/数据导出。下方高亮框"产品思维画架构的原则"。</div></div>
+<div class="speech"><span class="s-label">🎤 演讲内容</span>
+<p>这张图是我画的"产品视角全景图"。注意它的特点——<span class="keyline">没有端口号、没有技术栈、没有数据库表，只有"用户能做什么"和"数据怎么流转"。</span></p>
+<p>产品思维画架构，画的是用户的旅程，不是机器的结构。技术实现，是 AI 的事。</p>
+</div>
+<div class="tip"><b>💡 讲法提示</b>这一段 1 分钟带过即可。如果时间紧张，可以直接跳到 Phase 4。</div>
+</div>
+</div>
+</div>
+
+<!-- ==================== PHASE 4 ==================== -->
+<div class="phase-block" id="p4">
+<div class="phase-header ph-p4"><span class="ph-icon">🔧</span><h2>Phase 4：问题管理 — 100+ 问题的闭环迭代</h2><span class="ph-dur">⏱️ 12 分钟</span></div>
+
+<div class="seg">
+<div class="seg-head"><h3>4-A 排查四步法 + 问题全景（先给方法论，再看问题库）</h3><span class="seg-dur">3 min</span></div>
+<div class="seg-body">
+<div class="loc"><div><b>📍 网页位置：</b>Phase 4 区域顶部 → 四个统计数字 + "🧠 排查四步法"卡片 + 筛选标签栏。</div></div>
+<div class="screen"><div><b>🖥️ 页面显示：</b>四个数字（100+ 累计问题 / 75% 已解决 / 15% 停止优化 / 10% 无法解决）；四步法卡片（复现→定位→喂AI→验证）；一排可点击的筛选标签（全部/P0/P1/已解决/标注算法/流程状态/权限用户/界面体验）。</div></div>
+<div class="speech"><span class="s-label">🎤 演讲内容</span>
+<p>平台上线不是终点，是起点。整个项目我累计记录了 100 多个问题，大家看这四个数字：75% 已解决，15% 主动停止优化，10% 确实无法解决。</p>
+<p>注意，<span class="keyline">"停止优化"不是失败，是产品决策。</span>有些问题修它的成本比它造成的麻烦还大，果断放弃，把精力留给高价值问题——这个后面会具体讲。</p>
+<p>我的排查方法是四步：<strong>复现（截图录屏）→ 定位（前端？后端？部署？）→ 喂 AI（三要素描述）→ 验证（通过就关闭，不通过继续）</strong>。每个问题都走完这个闭环，记录在案。</p>
+<p>下面这个"问题库"大家可以自己点标签筛选。我现在演示一下——<span class="pause">（现场点击"🔴 P0"标签）</span>——这是最高优先级的问题，全是影响生产的功能 bug。</p>
+</div>
+<div class="terms-row"><div class="tr-label">📖 本段技术名词</div>
+<div class="mini-term"><b>P0 / P1 / P2</b><span class="mp">P 读 "皮"，Priority（优先级）的缩写</span><span class="md">P0 = 最高优先级（阻断生产，必须立刻修）；P1 = 重要（影响体验，尽快修）；P2 = 一般（有空再修）。这是互联网团队通用的问题分级语言。</span></div>
+<div class="mini-term"><b>前端 / 后端</b><span class="md">前端 = 用户看得见的界面；后端 = 服务器上看不见的逻辑。定位问题时先分清是哪一层，描述给 AI 才精准。</span></div>
+</div>
+<div class="tip"><b>💡 讲法提示</b>现场点击筛选标签是很好的互动点，能展示"问题库"是结构化、可检索的，不是一堆流水账。</div>
+</div>
+</div>
+
+<div class="seg">
+<div class="seg-head"><h3>4-B 挑 3 个典型问题讲透（不要逐条念！）</h3><span class="seg-dur">4 min</span></div>
+<div class="seg-body">
+<div class="loc"><div><b>📍 网页位置：</b>Phase 4 问题列表中，依次滚动到这三个问题卡片：①"打点标注后框体飘走无法吸附"（P0，带 3 张截图）②"导入 847 帧被拆成 45 个任务"（P0）③"打开黑色背景无法加载图片"（P0）。</div></div>
+<div class="screen"><div><b>🖥️ 页面显示：</b>每个问题卡片含：优先级标签、标题、截图、🔍原因、✅方案、💬给AI的原文（黑底代码框）。</div></div>
+<div class="speech"><span class="s-label">🎤 演讲内容</span>
+<p>问题库有 23 条展示在这里，我不逐条念，挑三个最有代表性的。</p>
+<p><strong>第一个："打点后框体飘走"。</strong>大家看这三张截图——标注员沿着建筑物打点，闭合的瞬间，框"飘"到别的地方去了，放大到 200% 以上必现。我给 AI 的描述是黑框里这段原文："围绕建筑物打点，闭合后框体飘走，附 3 张截图，200% 以上必现，应该是坐标转换问题。"——现象、复现条件、我的猜测，三句话。AI 一轮就定位到：屏幕坐标和画布坐标在缩放时没对齐。</p>
+<p><strong>第二个："847 帧被拆成 45 个任务"。</strong>我从云存储导入一个 847 帧的视频数据，结果变成了 45 个任务——因为它把每个子目录当成了一个独立任务。这种问题，<span class="keyline">只有真正去用、去导入真实数据的人才能发现，AI 在测试环境里永远遇不到。</span>这就是为什么"判断对不对"必须靠人实操。</p>
+<p><strong>第三个："打开后黑色背景，图片加载不出来"。</strong>这个最有意思——原因不在代码，而在文件权限：云存储挂载之后，服务器上的运行账号读不了那些图片文件。它教会我一件事：<span class="keyline">问题不一定出在"代码"里，也可能出在"环境"里。定位问题的第一步，是先分清层。</span></p>
+<p>三个问题，三种类型：算法 bug、流程设计缺陷、环境配置问题。这就是为什么排查四步法里"定位"排在"喂 AI"前面——你给 AI 指错方向，它再强也没用。</p>
+</div>
+<div class="terms-row"><div class="tr-label">📖 本段技术名词</div>
+<div class="mini-term"><b>坐标转换</b><span class="md">屏幕上鼠标点的位置（屏幕坐标）和图片上实际的位置（画布坐标）是两套数字，放大缩小后必须换算。换算错了，框就"飘"了。</span></div>
+<div class="mini-term"><b>OSS / 云存储挂载</b><span class="mp">"O-S-S" / 挂载读 "挂-载"</span><span class="md">把云端硬盘接到服务器上，让云存储看起来像本地文件夹。挂载后还有"文件权限"问题——谁能读、谁能写，配置不对就读不到文件。</span></div>
+<div class="mini-term"><b>文件权限</b><span class="md">操作系统规定"哪个账号能读/写哪个文件"。第三个问题的根因就是运行账号没有读图片的权限。</span></div>
+</div>
+<div class="tip"><b>💡 讲法提示</b>讲第一个问题时，指着黑底"💬 给 AI"框里的原文念——这是全场"如何给 AI 提需求"最直观的示范。</div>
+</div>
+</div>
+
+<div class="seg">
+<div class="seg-head"><h3>4-C 踩坑经验：3 个架构级的坑与产品取舍</h3><span class="seg-dur">4 min</span></div>
+<div class="seg-body">
+<div class="loc"><div><b>📍 网页位置：</b>Phase 4 区域下半部 → "🔥 踩坑经验 — 10 个真实深坑"列表，重点滚动到坑 1（Ant Design Table）、坑 2（Docker）、坑 5（504 超时）。</div></div>
+<div class="screen"><div><b>🖥️ 页面显示：</b>10 个坑的卡片列表，每个含 📍现象 / 🔍原因 / ✅产品决策。下方"📝 踩坑总结：5 个判断原则"。</div></div>
+<div class="speech"><span class="s-label">🎤 演讲内容</span>
+<p>除了功能 bug，还有 10 个"架构级的坑"——每一个都可能让项目方向调整。我挑三个讲。</p>
+<p><strong>坑 1：我想用 antd 的表格组件替换卡片列表，结果页面直接卡死。</strong>查了很久，是组件库和 CVAT 的渲染机制冲突。最后的决策是什么？<span class="keyline">不用表格了，保留卡片。</span>卡片能用、稳定、标注员已经习惯了。这就是产品取舍——<strong>稳定大于先进，能用大于完美。</strong>不要为了"看起来更专业"引入不稳定风险。</p>
+<p><strong>坑 2：Docker 部署，官方推荐，但我放弃了。</strong>Docker 是业界主流，号称"一次打包到处运行"。但我们的服务器要访问云存储挂载盘，Docker 容器里访问它需要特殊权限，性能差还经常断。最后的决策：<span class="keyline">完全放弃 Docker，用最朴素的方案直接部署。</span>官方推荐不等于最适合你。<strong>选方案不看"先不先进"，看"稳不稳定"。</strong></p>
+<p><strong>坑 5：上传大文件超时。</strong>云存储的读写速度就是比本地磁盘慢 5 到 10 倍，这是物理限制。我可以花三天去优化，但我做了另一个决策：<span class="keyline">在界面上加一句提示"大文件需等待 1-3 分钟"。</span>十分鐘搞定。<strong>管理用户预期，有时候比优化技术更有效。</strong></p>
+<p>这 10 个坑最后总结成 5 条判断原则，大家看屏幕下方。我只念最重要的两条：<strong>稳定大于先进；管理用户预期。</strong>这两条，和代码无关，全是产品判断。</p>
+</div>
+<div class="terms-row"><div class="tr-label">📖 本段技术名词</div>
+<div class="mini-term"><b>Docker</b><span class="mp">"道客"</span><span class="md">把软件和全部依赖打包成"集装箱"，搬到哪都能跑，业界主流部署方式。本项目因和云存储不兼容而放弃——"官方推荐 ≠ 最适合你"。</span></div>
+<div class="mini-term"><b>Ant Design（antd）</b><span class="mp">"安特-D"</span><span class="md">蚂蚁金服开源的现成界面组件库，表格、按钮都是现成的。坑 1 里崩溃的就是它的表格组件。</span></div>
+<div class="mini-term"><b>504 超时</b><span class="md">HTTP 状态码，"等太久没回应"。上传大文件时服务器等不及就报 504。解法：把"等待时间上限"调大 + 给用户明确提示。</span></div>
+</div>
+</div>
+</div>
+
+<div class="seg">
+<div class="seg-head"><h3>4-D 问题规律：从"救火"到"防火"（收口）</h3><span class="seg-dur">1 min</span></div>
+<div class="seg-body">
+<div class="loc"><div><b>📍 网页位置：</b>Phase 4 区域 → "📊 问题分类统计与规律"卡片（四个占比 + 按周时间线）。</div></div>
+<div class="screen"><div><b>🖥️ 页面显示：</b>四个占比（部署运维 20% / UI交互 35% / 功能逻辑 30% / 性能兼容 15%）；按周时间线：第1周部署问题→第2-3周功能问题→第4周起性能优化。</div></div>
+<div class="speech"><span class="s-label">🎤 演讲内容</span>
+<p>回头看这 100 多个问题，是有规律的：第 1 周全是部署问题，平台从"不能跑"到"能跑"；第 2-3 周是功能和界面，从"能跑"到"能用"；第 4 周起是性能和边缘场景，从"能用"到"好用"。</p>
+<p><span class="keyline">问题类型的演变，本身就是项目成熟度的刻度尺。</span>当你不再修部署问题、开始修体验问题的时候，你就知道这个产品快成了。</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ==================== PHASE 5 ==================== -->
+<div class="phase-block" id="p5">
+<div class="phase-header ph-p5"><span class="ph-icon">💡</span><h2>Phase 5：方法论沉淀 — 可复制的经验</h2><span class="ph-dur">⏱️ 8 分钟</span></div>
+
+<div class="seg">
+<div class="seg-head"><h3>5-A 三大方法论：规划先行 / 小步快跑 / 验收驱动</h3><span class="seg-dur">3 min</span></div>
+<div class="seg-body">
+<div class="loc"><div><b>📍 网页位置：</b>Phase 5 区域顶部 → 三张方法论卡片（🧭规划先行 / 🔁小步快跑 / 🎯验收驱动）。</div></div>
+<div class="screen"><div><b>🖥️ 页面显示：</b>三张并排卡片，每张一个方法论 + 一段说明。</div></div>
+<div class="speech"><span class="s-label">🎤 演讲内容</span>
+<p>前面讲了 5 个阶段的具体实践，最后把它抽象成三句话，这是今天最希望大家带走的干货。</p>
+<p><strong>第一，规划先行。</strong>先画清楚"做什么"再让 AI 动手。没有清晰的需求描述，AI 只会生成"正确但无用"的代码——代码能跑，但不是你要的东西。产品思维的框架能力，是 AI 的导航仪。</p>
+<p><strong>第二，小步快跑。</strong>不要一次给 AI 一个大需求。拆成小模块，每次验证一个点。100 个小对话远好于 1 个大对话。每个模块做完就验收，不积压。</p>
+<p><strong>第三，验收驱动。</strong>每次对话前先想好"怎么验证做对了"。验收标准就是给 AI 的考试题目——没有题目，你连它答得对不对都不知道。</p>
+<p>这三条，就是"0 行代码做出生产平台"的全部秘密。<span class="keyline">关键不在于 AI 多强，而在于产品思维的规划质量，决定了 AI 的产出质量。</span></p>
+</div>
+</div>
+</div>
+
+<div class="seg">
+<div class="seg-head"><h3>5-B 效率曲线：变强的不是 AI，是你</h3><span class="seg-dur">2 min</span></div>
+<div class="seg-body">
+<div class="loc"><div><b>📍 网页位置：</b>Phase 5 区域 → "📈 问题解决的效率曲线"卡片（红/黄/绿三格）。</div></div>
+<div class="screen"><div><b>🖥️ 页面显示：</b>三格对比：第1周 2-3小时/问题（红）→ 第2-3周 30-60分钟（黄）→ 第4周起 10-20分钟（绿）；下方一句话总结。</div></div>
+<div class="speech"><span class="s-label">🎤 演讲内容</span>
+<p>给大家看一条效率曲线。第 1 周，解决一个问题平均要 2-3 小时——不熟悉排查方法，描述也不精确。第 2-3 周，降到 30-60 分钟。第 4 周以后，10-20 分钟，很多问题 AI 一轮就命中。</p>
+<p>注意，这一个月里 AI 没有升级，工具没有变化。那变的是什么？<span class="keyline">是我描述问题的能力变强了。</span>这就是"人机协作"的本质——<strong>AI 的能力是常量，你的产品思维才是变量。</strong>你越会定义问题、越会描述问题，AI 就越强。</p>
+</div>
+<div class="tip"><b>💡 讲法提示</b>"变强的不是 AI，是你"是全场第二金句（第一是开场的"方向必须由产品思维来定"），值得停顿强调。</div>
+</div>
+</div>
+
+<div class="seg">
+<div class="seg-head"><h3>5-C 关键决策与风险：诚实展示"代价"（增加可信度）</h3><span class="seg-dur">2 min</span></div>
+<div class="seg-body">
+<div class="loc"><div><b>📍 网页位置：</b>Phase 5 区域 → "🔑 关键决策与风险"双栏（左侧 6 个决策表 / 右侧 4 条风险）。</div></div>
+<div class="screen"><div><b>🖥️ 页面显示：</b>左卡片"六个关键技术决策"表格（决策点/选择/判断依据）；右卡片"已识别风险与应对"列表。</div></div>
+<div class="speech"><span class="s-label">🎤 演讲内容</span>
+<p>一个成熟的复盘，不能只讲成功，还要讲代价。左边是我做的 6 个关键决策，每一个都附了判断依据——决策的价值不在结果，而在当时为什么这么选。</p>
+<p>右边是 4 条我主动识别的风险。比如：改了 CVAT 53 个文件，未来官方升级时合并冲突不可避免——所以我把汉化做成了运行时注入、把后端扩展做成了独立文件，尽量解耦。再比如云存储的性能瓶颈是物理限制——我的应对是调大超时加管理用户预期。</p>
+<p><span class="keyline">产品经理的价值，不只是把东西做出来，还要提前想清楚"它会以什么方式出问题"，并留好退路。</span></p>
+</div>
+<div class="terms-row"><div class="tr-label">📖 本段技术名词</div>
+<div class="mini-term"><b>解耦（Decoupling）</b><span class="mp">"迪-卡普林"</span><span class="md">让两个模块尽量不互相依赖。汉化不改源码、后端扩展用独立文件，都是解耦——这样官方升级时，冲突最小。</span></div>
+<div class="mini-term"><b>合并冲突（Merge Conflict）</b><span class="md">你改了文件 A，官方也改了文件 A，升级时两份修改"打架"，需要人工裁决。改的源码越多，冲突越多——这是二次开发开源软件的最大长期成本。</span></div>
+</div>
+</div>
+</div>
+
+<div class="seg">
+<div class="seg-head"><h3>5-D 收尾：成果与展望 + 核心公式</h3><span class="seg-dur">1 min</span></div>
+<div class="seg-body">
+<div class="loc"><div><b>📍 网页位置：</b>Phase 5 区域最底部 → 紫色渐变"🚀 成果与展望"大卡片。</div></div>
+<div class="screen"><div><b>🖥️ 页面显示：</b>四个数字（1个月/0行/20人/10万+）+ 三步闭环（定义问题→AI执行→迭代闭环）+ 核心公式。</div></div>
+<div class="speech"><span class="s-label">🎤 演讲内容</span>
+<p>最后回到开头的四个数字：1 个月、0 行代码、20 人生产、日产 10 万框。</p>
+<p>这个项目的完整闭环就三步：<strong>定义问题 → AI 执行 → 迭代验证</strong>，循环往复直到验收通过。</p>
+<p>我想用一句话结束今天的分享：<span class="keyline">产品思维负责想清楚，AI 负责做出来。这不是"替代开发"，而是让产品思维直接变成产品。</span></p>
+<p>核心公式送给大家：<strong>清晰的产品规划 × AI 的执行力 × 持续的迭代验证 = 独立交付能力。</strong>谢谢大家。</p>
+</div>
+<div class="tip"><b>💡 讲法提示</b>收尾要快、要稳。念完核心公式后停 2 秒再说"谢谢大家"，给掌声留空间。</div>
+</div>
+</div>
+</div>
+
+<!-- ==================== Q&A ==================== -->
+<div class="phase-block" id="qa">
+<div class="phase-header ph-open"><span class="ph-icon">❓</span><h2>Q&amp;A 预案：最可能被问到的 6 个问题</h2><span class="ph-dur">⏱️ 备用 · 5-10 分钟</span></div>
+
+<div class="qa-block">
+<div class="qa-head">❓ 高频问题预案（演讲前过一遍，心里有底）</div>
+<div class="qa-item"><div class="q">你用的是哪个 AI？为什么不用 XX？</div><div class="a">以 Claude 为主，配合 Cursor 编辑器。但其实用哪个 AI 不是关键——这个项目的方法论（规划先行、小步快跑、验收驱动）换成任何一个主流 AI 都成立。工具会迭代，方法不会过时。</div></div>
+<div class="qa-item"><div class="q">0 行手写代码，那你到底做了什么？你的价值在哪？</div><div class="a">我做了四件事：定义问题（把业务痛点翻译成需求）、拆解架构（把大系统拆成 AI 能消化的小模块）、判断结果（对不对、好不好，AI 做不了这个判断）、管理风险（技术选型、取舍、留退路）。代码是 AI 写的，但"写什么、为什么写、写完怎么验"全是产品判断。就像建筑师不搬砖，但楼是按他的图纸盖的。</div></div>
+<div class="qa-item"><div class="q">这套方法是不是只适合内部工具这种"简单"项目？</div><div class="a">恰恰相反，内部工具往往更难——因为需求琐碎、用户就在身边天天提意见、还没有商业产品的资源投入。这套方法的本质是"把模糊需求翻译成 AI 能执行的清晰任务"，这个能力在任何项目里都通用。当然，如果是高并发、强一致性的核心系统，还是需要专业工程师把关。</div></div>
+<div class="qa-item"><div class="q">AI 写的代码质量能保证吗？出了问题谁负责？</div><div class="a">代码质量靠两道防线：第一道是验收标准，每个功能做完都按标准验；第二道是真实使用，20 个标注员每天在用，有问题立刻暴露。事实上这 100 多个问题就是这么被发现和修复的。责任永远在我——是我决定"这个功能可以上线"，AI 只是执行者。</div></div>
+<div class="qa-item"><div class="q">为什么不直接招一个开发？成本怎么算？</div><div class="a">算一笔账：招一个懂标注业务又懂全栈的开发，招聘加磨合至少 2-3 个月，而这个平台 1 个月就上线了。更重要的是，产品需求我最清楚，省去了"产品→开发"的翻译损耗。当然这不是说开发不重要，而是在"业务逻辑清晰、技术复杂度中等"的场景下，AI 把"实现"这一环的成本降到了接近零。</div></div>
+<div class="qa-item"><div class="q">CVAT 升级了怎么办？你改的 53 个文件不就白改了？</div><div class="a">这是我在风险清单里的第一条。应对策略是"能解耦就解耦"：汉化是运行时注入的，不碰源码；后端扩展是独立文件，不改原有逻辑。真正深度修改的主要集中在前端交互层，这部分升级时确实需要人工合并——但这是二次开发开源软件的通用成本，比起完全自研 3-6 个月，这个代价小得多。</div></div>
+</div>
+</div>
+
+<!-- ==================== 时间表 ==================== -->
+<div class="phase-block" id="time">
+<div class="phase-header ph-open"><span class="ph-icon">⏱️</span><h2>时间分配表（60 分钟完整版 + 30 分钟压缩版）</h2><span class="ph-dur">参考</span></div>
+
+<div class="qa-block">
+<div class="qa-head">⏱️ 60 分钟完整版</div>
+<table class="time-table">
+<tr><th style="width:140px">环节</th><th style="width:90px">时长</th><th>累计</th><th>备注</th></tr>
+<tr><td>开场：四个数字</td><td>3 min</td><td>0-3</td><td>留足停顿，制造悬念</td></tr>
+<tr><td>Phase 1 产品规划</td><td>15 min</td><td>3-18</td><td>选型决策（1-D）是重点</td></tr>
+<tr><td>Phase 2 迭代方法论</td><td>15 min</td><td>18-33</td><td>案例 1（2-B）讲透 8 分钟</td></tr>
+<tr><td>Phase 3 交付成果</td><td>10 min</td><td>33-43</td><td>前后对比（3-A）呼应开场</td></tr>
+<tr><td>Phase 4 问题管理</td><td>12 min</td><td>43-55</td><td>挑 3 个典型问题，不逐条念</td></tr>
+<tr><td>Phase 5 方法论沉淀</td><td>8 min</td><td>55-63</td><td>三大方法论 + 效率曲线</td></tr>
+<tr class="total"><td>合计（不含 Q&amp;A）</td><td>63 min</td><td>—</td><td>实际讲述会压缩，Q&amp;A 另留 10 min</td></tr>
+</table>
+</div>
+
+<div class="qa-block">
+<div class="qa-head">⚡ 30 分钟压缩版（时间紧时按此删减）</div>
+<table class="time-table">
+<tr><th style="width:140px">环节</th><th style="width:90px">时长</th><th>删减策略</th></tr>
+<tr><td>开场：四个数字</td><td>2 min</td><td>保留，这是钩子</td></tr>
+<tr><td>Phase 1 产品规划</td><td>7 min</td><td>只讲 1-A 业务目标 + 1-D 选型决策，权限表和架构图一句话带过</td></tr>
+<tr><td>Phase 2 迭代方法论</td><td>8 min</td><td>案例 1 压缩到 3 轮（第1/4/5轮），案例 2 跳过，直接讲三要素公式</td></tr>
+<tr><td>Phase 3 交付成果</td><td>4 min</td><td>只讲前后对比表（3-A），功能卡片和开发全景跳过</td></tr>
+<tr><td>Phase 4 问题管理</td><td>5 min</td><td>只讲 1 个典型问题 + 坑 2（Docker 取舍），演示一下筛选功能</td></tr>
+<tr><td>Phase 5 方法论沉淀</td><td>4 min</td><td>三大方法论 + 效率曲线 + 核心公式收尾</td></tr>
+<tr class="total"><td>合计</td><td>30 min</td><td>核心观点全部保留，删的是细节和案例数量</td></tr>
+</table>
+</div>
+
+<div class="qa-block">
+<div class="qa-head">🎯 演讲前最后检查清单</div>
+<div class="qa-item"><div class="a" style="line-height:2.2">
+① 演示网页提前打开并全屏，演讲中只需滚动，不要临时找页面<br>
+② 本对照稿放在第二块屏幕或打印出来，紫色框是提词主体<br>
+③ 名词速查表通读两遍，重点熟悉：CVAT、Docker、Nginx、DOM、RBAC、API 六个高频词<br>
+④ 案例 1 的 5 轮和"给 AI 的原文黑框"位置提前确认，这是互动高光点<br>
+⑤ 准备一句话应对"现场演示"要求：直接打开平台登录页，演示"领取一帧→画框→提交"30 秒流程
+</div></div>
+</div>
+</div>
+
+</div>
+<div class="footer">产品思维 × AI · 演讲对照稿 · 配套演示页：yaozl666.github.io/ai-dev-showcase</div>
+</body>
+</html>
